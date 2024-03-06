@@ -8,9 +8,11 @@ function VideoList(props) {
       <h2 className="nextvideos__heading">NEXT VIDEOS</h2>
       <ul>
         {/* .filter((currEl, index) => index !== 2) */}
-        {props.Videos.map((video) => (
+        {props.Videos.filter((video, index) => index !== 0).map((video) => (
           <VideoElement key={video.id} video={video} />
         ))}
+
+        {/* MOCK VIDEO LIST STRUCTURE */}
         {/* <VideoElement Videos={props.Video} /> */}
         {/* <li className="nextvideos-individual">
           <img className="nextvideos-image" src="" alt="" />
