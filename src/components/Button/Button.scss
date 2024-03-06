@@ -2,3 +2,10 @@
 @use "../../styles/partials/typography" as *;
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/mixins" as *;
+
+.button {
+  width: 100vw;
+  height: 40px;
+  height: $button-height;
+  background-color: gold;
+}

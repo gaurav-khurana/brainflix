@@ -1,13 +1,17 @@
 import "./App.scss";
-import Videos from "./data/video-details.json";
-import BrainflixLogo from "./assets/logo/BrainFlix-logo.svg";
-import UserImage from "./assets/images/Mohan-muruge.jpg";
-import VideoList from "./components/VideoList/VideoList";
+// import Videos from "./data/video-details.json";
+// import UserImage from "./assets/images/Mohan-muruge.jpg";
+// import VideoList from "./components/VideoList/VideoList";
+import Header from "./components/Header/Header";
+// import Hero from "./components/Hero/Hero";
+// import VideoSection from "./components/VideoSection/VideoSection";
+import Main from "./components/Main/Main";
 
 function App() {
   return (
-    <div>
-      <header>
+    <>
+      <Header />
+      {/* <header>
         <div className="logo-container">
           <img className="logo" src={BrainflixLogo} alt="BrainFlix logo" />
         </div>
@@ -15,7 +19,6 @@ function App() {
           <div className="navbar__search-container">
             <div className="navbar__search">
               <img className="navbar__search-image" src="" alt="" />
-              {/* <p className="navbar__search-text">Search</p> */}
               <input
                 className="navbar__search-text"
                 type="text"
@@ -31,42 +34,52 @@ function App() {
             <p className="button__text"></p>
           </div>
         </nav>
-      </header>
-      <main>
-        <section className="hero">
+      </header> */}
+
+      <Main />
+      {/* <main> */}
+
+      {/* Hero section */}
+
+      {/* <Hero videoFirst={Videos} /> */}
+      {/* <section className="hero">
           <video className="hero__video" controls src={UserImage}></video>
-        </section>
-        <section className="video">
-          <article className="video-details">
-            <div className="video-details__title-container">
-              <h1 className="video-details__title">
+        </section> */}
+
+      {/* video section */}
+
+      {/* <VideoSection /> */}
+      {/* <section className="video">
+          <article className="hero-video">
+            <div className="hero-video__title-container">
+              <h1 className="hero-video__title">
                 The Future of Artificial Intelligence
               </h1>
             </div>
-            <div className="video-details__details-container">
-              <div className="video-details__creator-container">
-                <h3 className="video-details__name">By Aiden Thompson</h3>
-                <p className="video-details__date">8/8/2023</p>
+            <div className="hero-video__details-container">
+              <div className="hero-video__creator-container">
+                <h3 className="hero-video__name">By Aiden Thompson</h3>
+                <p className="hero-video__date">8/8/2023</p>
               </div>
-              <div className="video-details__social-container">
+              <div className="hero-video__social-container">
                 <img
-                  className="video-details__seen"
+                  className="hero-video__seen"
                   src=""
                   alt="Video seen icon"
                 />
-                <p className="video-details__seen-counter">980,544</p>
+                <p className="hero-video__seen-counter">980,544</p>
                 <img
-                  className="video-details__likes"
+                  className="hero-video__likes"
                   src=""
                   alt="Likes icon for the video"
                 />
-                <p className="video-details__likes-counter">22,479</p>
+                <p className="hero-video__likes-counter">22,479</p>
               </div>
-            </div>
-            {/* <div className="video-details__description-container"> */}
-            <p className="video-details__description"></p>
-            {/* </div> */}
-          </article>
+            </div> */}
+      {/* <div className="hero-video__description-container"> */}
+      {/* <p className="hero-video__description"></p> */}
+      {/* </div> */}
+      {/* </article>
           <article className="video-comments">
             <h3 className="video-comments__counter">3 Comments</h3>
             <article className="newcomment">
@@ -151,13 +164,13 @@ function App() {
               </article>
             </div>
           </article>
-        </section>
+        </section> */}
 
-        {/* Video list Section */}
+      {/* Video list Section */}
 
-        <VideoList Videos={Videos} />
+      {/* <VideoList Videos={Videos} /> */}
 
-        {/* <section className="nextvideos">
+      {/* <section className="nextvideos">
           <h2 className="nextvideos__heading">NEXT VIDEOS</h2>
           <ul>
             <li className="nextvideos-individual">
@@ -218,8 +231,8 @@ function App() {
             </li>
           </ul>
         </section> */}
-      </main>
-    </div>
+      {/* </main> */}
+    </>
   );
 }
 

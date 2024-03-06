@@ -1,0 +1,27 @@
+@use "../../styles/partials/global" as *;
+@use "../../styles/partials/typography" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.navbar {
+  &__search {
+    width: 85vw;
+    &-container {
+      width: 100vw;
+    }
+
+    &-image {
+      width: 36px;
+      height: 36px;
+
+      @include tablet {
+        width: 40px;
+        height: 40px;
+      }
+    }
+
+    &-text {
+      color: $color-primary-black;
+    }
+  }
+}
