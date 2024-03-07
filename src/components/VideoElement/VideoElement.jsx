@@ -1,6 +1,10 @@
 import "./VideoElement.scss";
+// import videoContext from "../../context/context";
+// import { useContext } from "react";
 
 function VideoElement(props) {
+  // const video = useContext(videoContext);
+
   return (
     <li className="nextvideos-individual">
       <img

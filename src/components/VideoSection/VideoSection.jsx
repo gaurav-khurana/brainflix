@@ -1,10 +1,14 @@
+import { useContext } from "react";
 import HeroVideoSection from "../HeroVideoSection/HeroVideoSection";
 import VideoCommentsSection from "../VideoCommentsSection/VideoCommentsSection";
+import { allVideosContext } from "../../context/context";
 
 function VideoSection() {
+  const allVideos = useContext(allVideosContext);
+
   return (
     <section className="video">
-      <HeroVideoSection />
+      <HeroVideoSection defaultVideo={allVideos[0]} />
 
       {/* <section className="hero-video">
         <div className="hero-video__title-container">

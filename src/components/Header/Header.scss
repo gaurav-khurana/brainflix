@@ -2,3 +2,14 @@
 @use "../../styles/partials/typography" as *;
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/mixins" as *;
+
+.header {
+  width: 100vw;
+  @include flexbox(column, center, center);
+  //   background-color: gold;
+}
+
+.logo {
+  height: 3.6rem;
+  margin-top: $mob-spacing-small;
+}

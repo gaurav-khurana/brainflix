@@ -4,7 +4,7 @@ import NavBar from "../NavBar/NavBar";
 
 function Header() {
   return (
-    <header>
+    <header className="header">
       <div className="logo-container">
         <img className="logo" src={BrainflixLogo} alt="BrainFlix logo" />
       </div>

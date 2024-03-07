@@ -1,11 +1,11 @@
 import OldCommentIndividual from "../OldCommentIndividual/OldCommentIndividual";
 
-function OldCommentsSection() {
+function OldCommentsSection(props) {
   return (
     <div className="oldcomments">
       {/* //NOTE use map func to loop over comments in array to update name date text */}
 
-      <OldCommentIndividual />
+      <OldCommentIndividual {...props} />
       {/* <article className="oldcomments-individual">
         <figure className="oldcomments__image-container">
           <img className="oldcomments__image" src="" alt="missing user" />
@@ -23,7 +23,7 @@ function OldCommentsSection() {
         </div>
       </article> */}
 
-      <OldCommentIndividual />
+      <OldCommentIndividual {...props} />
       {/* <article className="oldcomments-individual">
         <figure className="oldcomments__image-container">
           <img className="oldcomments__image" src="" alt="missing user" />
@@ -41,7 +41,7 @@ function OldCommentsSection() {
         </div>
       </article> */}
 
-      <OldCommentIndividual />
+      <OldCommentIndividual {...props} />
       {/* <article className="oldcomments-individual">
         <figure className="oldcomments__image-container">
           <img className="oldcomments__image" src="" alt="missing user" />

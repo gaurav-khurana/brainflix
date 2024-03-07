@@ -6,22 +6,43 @@
 .navbar {
   &__search {
     width: 85vw;
+    // background-color: red;
     &-container {
       width: 100vw;
     }
 
     &-image {
-      width: 36px;
-      height: 36px;
+      width: 1.2rem;
+      height: 1.2rem;
 
       @include tablet {
-        width: 40px;
-        height: 40px;
+        width: 1.2rem;
+        height: 1.2rem;
       }
     }
 
     &-text {
-      color: $color-primary-black;
+      &::placeholder {
+        color: blue;
+      }
+    }
+  }
+
+  &__userimage {
+    width: 3.6rem;
+    height: 3.6rem;
+
+    &--mobile {
+      @include tablet {
+        display: none;
+      }
+    }
+
+    &--tablet {
+      display: none;
+      @include tablet {
+        display: inline-block;
+      }
     }
   }
 }

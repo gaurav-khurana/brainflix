@@ -1,16 +1,20 @@
 import "./App.scss";
-// import Videos from "./data/video-details.json";
+import Videos from "./data/video-details.json";
+import Header from "./components/Header/Header";
+import Main from "./components/Main/Main";
+import { allVideosContext } from "./context/context";
 // import UserImage from "./assets/images/Mohan-muruge.jpg";
 // import VideoList from "./components/VideoList/VideoList";
-import Header from "./components/Header/Header";
 // import Hero from "./components/Hero/Hero";
 // import VideoSection from "./components/VideoSection/VideoSection";
-import Main from "./components/Main/Main";
 
 function App() {
   return (
     <>
       <Header />
+      <allVideosContext.Provider value={Videos}>
+        <Main />
+      </allVideosContext.Provider>
       {/* <header>
         <div className="logo-container">
           <img className="logo" src={BrainflixLogo} alt="BrainFlix logo" />

@@ -1,11 +1,12 @@
+import { useContext } from "react";
 import NewCommentSection from "../NewCommentSection/NewCommentSection";
 import OldCommentsSection from "../OldCommentsSection/OldCommentsSection";
+import { allVideosContext } from "../../context/context";
 
 function VideoCommentsSection() {
+  const allVideos = useContext(allVideosContext);
   return (
     <section className="video-comments">
-      {/* //TODO - FINALIZE WHR 3 COMMENTS WL GO WT HERO-VIDEO-SECT OR COMMENTS-SECT */}
-
       <NewCommentSection />
       {/* <article className="newcomment">
         <div className="newcomment__userimage-container">
@@ -27,7 +28,7 @@ function VideoCommentsSection() {
         </div>
       </article> */}
 
-      <OldCommentsSection />
+      <OldCommentsSection defaultVideo={allVideos[0]} />
       {/* <div className="oldcomments">
         <article className="oldcomments-individual">
           <figure className="oldcomments__image-container">
