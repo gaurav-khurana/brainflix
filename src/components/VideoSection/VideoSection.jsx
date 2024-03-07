@@ -1,14 +1,14 @@
-import { useContext } from "react";
+// import { useContext } from "react";
 import HeroVideoSection from "../HeroVideoSection/HeroVideoSection";
 import VideoCommentsSection from "../VideoCommentsSection/VideoCommentsSection";
-import { allVideosContext } from "../../context/context";
+// import { allVideosContext } from "../../context/context";
 
-function VideoSection() {
-  const allVideos = useContext(allVideosContext);
+function VideoSection(props) {
+  // const allVideos = useContext(allVideosContext);
 
   return (
     <section className="video">
-      <HeroVideoSection defaultVideo={allVideos[0]} />
+      <HeroVideoSection {...props} />
 
       {/* <section className="hero-video">
         <div className="hero-video__title-container">
@@ -37,7 +37,7 @@ function VideoSection() {
         // </div>
       </section> */}
 
-      <VideoCommentsSection />
+      <VideoCommentsSection {...props} />
 
       {/* <section className="video-comments">
         <h3 className="video-comments__counter">3 Comments</h3>

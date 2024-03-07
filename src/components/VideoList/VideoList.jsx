@@ -4,8 +4,16 @@ import "./VideoList.scss";
 import { allVideosContext } from "../../context/context";
 import { useContext } from "react";
 
-function VideoList() {
+function VideoList(props) {
+  console.log(props);
   const allVideos = useContext(allVideosContext);
+
+  // const handleVideoItem = (videoId) => {
+  //   console.log(videoId);
+  //   const foundVideo = allVideos.find((video) => video.id === videoId);
+  //   console.log(foundVideo);
+  // };
+
   return (
     <section className="nextvideos">
       <h2 className="nextvideos__heading">NEXT VIDEOS</h2>
@@ -13,11 +21,19 @@ function VideoList() {
         {/* .filter((currEl, index) => index !== 2) */}
         {/* console.log(props.Videos); */}
         {/* /* console.log(props); */}
+
         {allVideos
-          .filter((video, index) => index !== 0)
+          // .filter((video, index) => index !== 0)
+          .filter((video) => video.id !== props.defaultVideo.id)
           .map((video) => (
-            <VideoElement key={video.id} video={video} />
+            <VideoElement
+              key={video.id}
+              video={video}
+              handleVideoItem={props.handleVideoItem}
+              // setSelectedVideo={setSelectedVideo};
+            />
           ))}
+
         {/* MOCK VIDEO LIST STRUCTURE */}
         {/* <VideoElement Videos={props.Video} /> */}
         {/* <li className="nextvideos-individual">

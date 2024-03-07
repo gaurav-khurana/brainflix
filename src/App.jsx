@@ -3,12 +3,16 @@ import Videos from "./data/video-details.json";
 import Header from "./components/Header/Header";
 import Main from "./components/Main/Main";
 import { allVideosContext } from "./context/context";
+// import { useContext, useState } from "react";
 // import UserImage from "./assets/images/Mohan-muruge.jpg";
 // import VideoList from "./components/VideoList/VideoList";
 // import Hero from "./components/Hero/Hero";
 // import VideoSection from "./components/VideoSection/VideoSection";
 
 function App() {
+  // const allVideos = useContext(allVideosContext);
+  // const [selectedVideo, setSelectedVideo] = useState[allVideos[0]];
+
   return (
     <>
       <Header />
@@ -40,7 +44,7 @@ function App() {
         </nav>
       </header> */}
 
-      <Main />
+      {/* <Main /> */}
       {/* <main> */}
 
       {/* Hero section */}

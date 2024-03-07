@@ -29,6 +29,7 @@ function SearchBar() {
         className="button--navbar"
         srcImage={SearchIcon}
         altText="Search icon"
+        text="UPLOAD"
       />
       <img
         className="navbar__userimage navbar__userimage--tablet"

@@ -5,8 +5,18 @@ import "./VideoElement.scss";
 function VideoElement(props) {
   // const video = useContext(videoContext);
 
+  // state func to set selected video
+  function setSelectedVideo(selectedVideo) {
+    return selectedVideo === props.video;
+    // return props.defaultVideo.id === foundVideo;
+  }
+
   return (
-    <li className="nextvideos-individual">
+    <li
+      className="nextvideos-individual"
+      onClick={() => setSelectedVideo(props.handleVideoItem(props.video.id))}
+      // onClick={() => props.handleVideoItem(props.video.id)}
+    >
       <img
         className="nextvideos-image"
         src={props.video.image}

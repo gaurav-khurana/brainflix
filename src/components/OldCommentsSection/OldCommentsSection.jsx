@@ -1,11 +1,14 @@
 import OldCommentIndividual from "../OldCommentIndividual/OldCommentIndividual";
 
 function OldCommentsSection(props) {
+  const commentsArr = props.defaultVideo.comments;
+
   return (
     <div className="oldcomments">
       {/* //NOTE use map func to loop over comments in array to update name date text */}
-
-      <OldCommentIndividual {...props} />
+      {commentsArr.map((comment) => {
+        return <OldCommentIndividual key={comment.id} comment={comment} />;
+      })}
       {/* <article className="oldcomments-individual">
         <figure className="oldcomments__image-container">
           <img className="oldcomments__image" src="" alt="missing user" />
@@ -23,7 +26,7 @@ function OldCommentsSection(props) {
         </div>
       </article> */}
 
-      <OldCommentIndividual {...props} />
+      {/* <OldCommentIndividual {...props} /> */}
       {/* <article className="oldcomments-individual">
         <figure className="oldcomments__image-container">
           <img className="oldcomments__image" src="" alt="missing user" />
@@ -41,7 +44,7 @@ function OldCommentsSection(props) {
         </div>
       </article> */}
 
-      <OldCommentIndividual {...props} />
+      {/* <OldCommentIndividual {...props} /> */}
       {/* <article className="oldcomments-individual">
         <figure className="oldcomments__image-container">
           <img className="oldcomments__image" src="" alt="missing user" />

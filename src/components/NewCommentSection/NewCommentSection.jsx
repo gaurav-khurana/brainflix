@@ -3,6 +3,13 @@ import UserImage from "../../assets/images/Mohan-muruge.jpg";
 import CommentIcon from "../../assets/icons/add_comment.svg";
 
 function NewCommentSection() {
+  // NOTE - event handler to Submit Form
+
+  function handleSubmit(event) {
+    event.preventDefault();
+    console.log(event);
+  }
+
   return (
     <article className="newcomment">
       <div className="newcomment__userimage-container">
@@ -17,10 +24,12 @@ function NewCommentSection() {
         <input className="newcomment__input" type="textarea" />
 
         <Button
+          onClick={handleSubmit}
           containerClassName="newcomment__button-container"
           className="button--comment"
           src={CommentIcon}
           altText="Add Comment Icon"
+          text="COMMENT"
         />
 
         {/* <div className="newcomment__button-container">
