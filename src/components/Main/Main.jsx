@@ -1,3 +1,4 @@
+import "./Main.scss";
 import Hero from "../Hero/Hero";
 import VideoSection from "../VideoSection/VideoSection";
 import VideoList from "../VideoList/VideoList";

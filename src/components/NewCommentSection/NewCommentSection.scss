@@ -10,6 +10,7 @@
   border-bottom: $divider-width solid $divider-color;
 
   @include flexbox(row, center, center);
+  flex-wrap: wrap;
 
   &__userimage {
     width: 3.6rem;
@@ -29,10 +30,10 @@
     width: 75vw;
   }
 
-  &__title {
-    color: $color-primary-silver;
-    margin-bottom: 0.4rem;
-  }
+  // &__title {
+  //   // color: $color-primary-silver;
+  //   // margin-bottom: 0.4rem;
+  // }
 
   &__input {
     width: 75vw;
@@ -46,6 +47,36 @@
 
     &::placeholder {
       color: $color-primary-black;
+    }
+  }
+}
+
+//TODO - TABLET MODE
+
+@include tablet {
+  .newcomment {
+    @include flexbox(row, flex-start, center);
+
+    &__userimage {
+      width: 4rem;
+      height: 4rem;
+      margin-right: 2rem;
+
+      &-container {
+        height: 5.5rem;
+      }
+    }
+
+    &__comment-container {
+      width: 82vw;
+
+      @include flexbox(row, flex-start, flex-start);
+    }
+
+    &__input {
+      width: 80vw;
+      height: 4.5rem;
+      margin-right: $desk-spacing-small;
     }
   }
 }

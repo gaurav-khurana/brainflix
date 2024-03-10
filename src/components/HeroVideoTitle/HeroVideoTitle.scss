@@ -14,3 +14,14 @@
     }
   }
 }
+
+// tablet mode
+
+@include tablet {
+  .hero-video {
+    &__title {
+      border-bottom: 0;
+      padding-bottom: 0.8rem;
+    }
+  }
+}

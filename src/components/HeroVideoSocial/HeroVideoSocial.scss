@@ -39,3 +39,17 @@
   //   }
   // }
 }
+
+// tablet mode
+
+@include tablet {
+  .hero-video {
+    &__social-container {
+      height: 4rem;
+
+      width: 25vw;
+      @include flexbox(row, space-between, center);
+      // @include flexbox(row, flex-start, center);
+    }
+  }
+}

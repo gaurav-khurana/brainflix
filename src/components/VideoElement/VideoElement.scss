@@ -16,6 +16,7 @@
     border-radius: $button-radius;
     margin-right: $mob-spacing-small;
     background-color: $color-secondary-mercury;
+    object-fit: cover;
   }
 
   &__details-container {
@@ -26,5 +27,24 @@
 
   &__title {
     margin-bottom: 0.5rem;
+  }
+}
+
+// tablet mode
+
+@include tablet {
+  .nextvideos {
+    &__individual {
+      margin-bottom: $desk-spacing-small;
+    }
+
+    &__image {
+      height: 7rem;
+      width: 11rem;
+    }
+
+    &__details-container {
+      height: 7.4rem;
+    }
   }
 }

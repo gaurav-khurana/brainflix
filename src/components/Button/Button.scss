@@ -4,9 +4,7 @@
 @use "../../styles/partials/mixins" as *;
 
 .button {
-  display: inline-block;
   width: 90vw;
-  max-height: 40px;
   height: $button-height;
   background-color: $color-primary-blue;
   color: $color-primary-white;
@@ -55,6 +53,38 @@
 //   // width: 100vw;
 //   // @include flexbox(row, flex-start, center);
 // }
-.newcomment__button-container {
-  // height: 3rem;
+// .newcomment__button-container {
+//   // height: 3rem;
+// }
+
+//TODO- TABLET MODE
+
+@include tablet {
+  .button {
+    width: 20vw;
+
+    &--navbar {
+      margin-right: $desk-spacing-small;
+    }
+
+    &--comment {
+      height: 4.5rem;
+      width: 22vw;
+      margin-right: 0;
+    }
+
+    &__image {
+      &--navbar {
+        margin-right: 3rem;
+      }
+
+      &--comment {
+        margin-right: $desk-spacing-small;
+      }
+    }
+  }
+  .newcomment__button-container {
+    width: 30vw;
+    height: 4.5rem;
+  }
 }

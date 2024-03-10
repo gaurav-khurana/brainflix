@@ -15,3 +15,15 @@
     color: $color-primary-silver;
   }
 }
+
+// tablet mode
+
+@include tablet {
+  .hero-video {
+    &__creator-container {
+      height: 4rem;
+      width: 30vw;
+      @include flexbox(row, space-between, center);
+    }
+  }
+}

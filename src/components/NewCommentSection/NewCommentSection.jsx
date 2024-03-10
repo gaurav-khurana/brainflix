@@ -14,6 +14,8 @@ function NewCommentSection() {
 
   return (
     <article className="newcomment">
+      <h3 className="newcomment__title">JOIN THE CONVERSATION</h3>
+
       <div className="newcomment__userimage-container">
         <img
           className="newcomment__userimage"
@@ -21,8 +23,8 @@ function NewCommentSection() {
           alt="Active user"
         />
       </div>
+
       <div className="newcomment__comment-container">
-        <h3 className="newcomment__title">JOIN THE CONVERSATION</h3>
         <textarea
           className="newcomment__input"
           name="newcomment__input"

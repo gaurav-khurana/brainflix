@@ -6,6 +6,7 @@
 .hero-video {
   &__description {
     width: 90vw;
+
     &-container {
       padding: $mob-spacing-small;
       padding-left: 0;
@@ -17,5 +18,25 @@
 .video-comments {
   &__counter {
     margin-top: $mob-spacing-small;
+  }
+}
+
+// tablet mode
+
+@include tablet {
+  .hero-video {
+    &__description {
+      width: 88vw;
+
+      &-container {
+        padding-top: $desk-spacing-small;
+      }
+    }
+  }
+
+  .video-comments {
+    &__counter {
+      margin-top: $desk-spacing-small;
+    }
   }
 }

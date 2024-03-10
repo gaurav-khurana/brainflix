@@ -69,8 +69,28 @@
       }
     }
   }
+}
 
-  // &__button-container {
-  //   // margin-bottom: $mob-spacing-small;
-  // }
+//TODO - tablet mode
+
+@include tablet {
+  .navbar {
+    &__search {
+      width: 40vw;
+      // margin-right: $desk-spacing-small;
+
+      @include flexbox(row, flex-end, center);
+
+      &-element {
+        // width: 35vw;
+        width: 30vw;
+        height: 4rem;
+        margin-right: $desk-spacing-small;
+      }
+
+      &-text {
+        width: 35vw;
+      }
+    }
+  }
 }

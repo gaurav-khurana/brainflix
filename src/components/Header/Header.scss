@@ -8,11 +8,21 @@
   padding: 0 $mob-spacing-small;
 
   @include flexbox(column, center, center);
-  // background-color: red;
+
+  @include tablet {
+    // height: 10vh;
+    padding: 0 $desk-spacing-big;
+
+    @include flexbox(row, flex-start, center);
+  }
 }
 
 .logo {
   max-height: 2.5rem;
   max-width: 12rem;
   margin-top: $mob-spacing-small;
+
+  @include tablet {
+    margin-bottom: $mob-spacing-small;
+  }
 }

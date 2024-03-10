@@ -16,3 +16,16 @@
     @include flexbox(row, flex-start, center);
   }
 }
+
+// tablet mode
+
+@include tablet {
+  .hero-video {
+    &__details-container {
+      height: 4rem;
+      border-bottom: $divider-width solid $divider-color;
+
+      @include flexbox(row, space-between, center);
+    }
+  }
+}

@@ -17,6 +17,7 @@ function VideoList(props) {
   return (
     <section className="nextvideos">
       <h2 className="nextvideos__heading">NEXT VIDEOS</h2>
+
       <ul className="nextvideos__list">
         {/* .filter((currEl, index) => index !== 2) */}
         {/* console.log(props.Videos); */}

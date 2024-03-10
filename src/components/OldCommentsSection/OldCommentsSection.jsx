@@ -7,9 +7,11 @@ function OldCommentsSection(props) {
   return (
     <div className="oldcomments">
       {/* //NOTE use map func to loop over comments in array to update name date text */}
+
       {commentsArr.map((comment) => {
         return <OldCommentIndividual key={comment.id} comment={comment} />;
       })}
+
       {/* <article className="oldcomments-individual">
         <figure className="oldcomments__image-container">
           <img className="oldcomments__image" src="" alt="missing user" />

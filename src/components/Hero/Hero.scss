@@ -11,6 +11,7 @@
   opacity: 50%;
 
   @include tablet {
+    margin-top: 0;
     @include flexbox(row, center, center);
   }
 }

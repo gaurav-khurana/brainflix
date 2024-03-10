@@ -7,4 +7,10 @@
   width: 100vw;
 
   @include flexbox(column, center, center);
+
+  @include tablet {
+    width: 75vw;
+
+    @include flexbox(row, flex-end, center);
+  }
 }
