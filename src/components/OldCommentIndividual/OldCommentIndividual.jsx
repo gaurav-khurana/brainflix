@@ -1,7 +1,8 @@
 // import OldCommentDetails from "../OldCommentDetails/OldCommentDetails";
 import "./OldCommentIndividual.scss";
 // import UserImage from "../../assets/images/Mohan-muruge.jpg";
-import { timestampToLocaleDateString } from "../../utils/utils";
+// import { timestampToLocaleDateString } from "../../utils/utils";
+import { dynamicTimestamp } from "../../utils/utils";
 
 function OldCommentIndividual(props) {
   return (
@@ -33,7 +34,7 @@ function OldCommentIndividual(props) {
           </h3>
 
           <p className="oldcomments__date">
-            {timestampToLocaleDateString(props.comment.timestamp)}
+            {dynamicTimestamp(props.comment.timestamp)}
             {/* 8/11/2023 */}
           </p>
         </div>
