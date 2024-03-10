@@ -47,4 +47,25 @@
       height: 7.4rem;
     }
   }
+
+  // desktop mode
+
+  @include desktop {
+    .nextvideos {
+      width: 30vw;
+
+      &__individual {
+        margin-bottom: 2rem;
+      }
+
+      &__image {
+        height: 6.5rem;
+        width: 10.7rem;
+      }
+
+      &__details-container {
+        width: 20vw;
+      }
+    }
+  }
 }

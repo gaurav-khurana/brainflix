@@ -8,15 +8,17 @@
   padding: $mob-spacing-small;
   padding-top: 0;
 
+  // tablet mode
   @include tablet {
-    margin-top: 0;
-    padding: $desk-spacing-small $desk-spacing-big 0;
+    // margin-top: 0;
+    // padding: $desk-spacing-small $desk-spacing-big 0;
   }
 
   &__heading {
     color: $color-primary-silver;
     margin-bottom: $mob-spacing-small;
 
+    // tablet mode
     @include tablet {
       margin-bottom: $desk-spacing-small;
     }
@@ -26,9 +28,22 @@
 }
 
 // tablet mode
+
 @include tablet {
   .nextvideos {
     width: 48vw;
     padding-bottom: 1rem;
+    margin-top: 0;
+    padding: $desk-spacing-small $desk-spacing-big 0;
+  }
+}
+
+// desktop mode
+
+@include desktop {
+  .nextvideos {
+    width: 25vw;
+    border-left: $divider-width solid $divider-color;
+    padding-left: $mob-spacing-big;
   }
 }

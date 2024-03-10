@@ -27,3 +27,23 @@
     }
   }
 }
+
+// tablet landscape mode
+
+@include tablet-landscape {
+  .hero-video {
+    &__creator-container {
+      width: 24vw;
+    }
+  }
+}
+
+// desktop mode
+
+@include desktop {
+  .hero-video {
+    &__creator-container {
+      width: 17vw;
+    }
+  }
+}

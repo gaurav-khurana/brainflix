@@ -57,7 +57,7 @@
 //   // height: 3rem;
 // }
 
-//TODO- TABLET MODE
+//NOTE  tablet mode
 
 @include tablet {
   .button {
@@ -86,5 +86,35 @@
   .newcomment__button-container {
     width: 30vw;
     height: 4.5rem;
+  }
+}
+
+// NOTE desktop mode
+
+@include desktop {
+  .button {
+    &--navbar {
+      width: 12vw;
+      // margin-right: $desk-spacing-small;
+    }
+
+    &--comment {
+      width: 14vw;
+      // margin-right: 0;
+    }
+
+    &__image {
+      &--navbar {
+        // margin-right: 3rem;
+      }
+
+      &--comment {
+        // margin-right: $desk-spacing-small;
+      }
+    }
+  }
+  .newcomment__button-container {
+    width: 15.5vw;
+    // height: 4.5rem;
   }
 }

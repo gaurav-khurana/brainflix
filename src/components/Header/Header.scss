@@ -9,11 +9,19 @@
 
   @include flexbox(column, center, center);
 
+  // tablet mode
+
   @include tablet {
-    // height: 10vh;
     padding: 0 $desk-spacing-big;
 
     @include flexbox(row, flex-start, center);
+  }
+
+  // desktop mode
+
+  @include desktop {
+    width: 85vw;
+    margin-inline: auto;
   }
 }
 
@@ -21,6 +29,8 @@
   max-height: 2.5rem;
   max-width: 12rem;
   margin-top: $mob-spacing-small;
+
+  // tablet mode
 
   @include tablet {
     margin-bottom: $mob-spacing-small;

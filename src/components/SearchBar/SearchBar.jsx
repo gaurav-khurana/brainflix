@@ -20,6 +20,7 @@ function SearchBar() {
             placeholder="Search"
           />
         </div>
+
         <img
           className="navbar__userimage navbar__userimage--mobile"
           src={UserImage}
@@ -27,7 +28,7 @@ function SearchBar() {
           loading="lazy"
         />
       </div>
-      {/* <Button className={className} srcImage ={srcImage} altText={altText} /> */}
+
       <Button
         containerClassName="navbar__button-container"
         className="button--navbar"
@@ -36,6 +37,7 @@ function SearchBar() {
         altText="Upload video icon"
         text="UPLOAD"
       />
+
       <img
         className="navbar__userimage navbar__userimage--tablet"
         src={UserImage}

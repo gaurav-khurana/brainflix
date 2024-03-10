@@ -24,7 +24,7 @@ function Main() {
   };
 
   return (
-    <main>
+    <main className="main">
       {/* Hero section */}
       {/* <videoContext.Provider */}
       <Hero
@@ -35,20 +35,21 @@ function Main() {
       />
 
       {/* video section - has hero-video details, new comment & old comments section */}
-      <VideoSection
-        // key={selectedVideo.id}
-        defaultVideo={selectedVideo}
-        // handleVideoItem={handleVideoItem}
-        setSelectedVideo={setSelectedVideo}
-      />
-
-      {/* Video list Section */}
-      <VideoList
-        key={allVideos.id}
-        defaultVideo={selectedVideo}
-        handleVideoItem={handleVideoItem}
-        setSelectedVideo={setSelectedVideo}
-      />
+      <div className="main--mobile main--desktop">
+        <VideoSection
+          // key={selectedVideo.id}
+          defaultVideo={selectedVideo}
+          // handleVideoItem={handleVideoItem}
+          setSelectedVideo={setSelectedVideo}
+        />
+        {/* Video list Section */}
+        <VideoList
+          key={allVideos.id}
+          defaultVideo={selectedVideo}
+          handleVideoItem={handleVideoItem}
+          setSelectedVideo={setSelectedVideo}
+        />
+      </div>
     </main>
   );
 }

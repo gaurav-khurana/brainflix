@@ -79,4 +79,22 @@
       margin-right: $desk-spacing-small;
     }
   }
+
+  // desktop mode
+
+  @include desktop {
+    .newcomment {
+      width: 52.3vw;
+
+      &__comment {
+        &-container {
+          width: 47vw;
+        }
+      }
+
+      &__input {
+        width: 30vw;
+      }
+    }
+  }
 }

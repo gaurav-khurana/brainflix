@@ -8,13 +8,19 @@
     width: 100vw;
     height: auto;
 
+    // tablet mode
+
     @include tablet {
       width: 90vw;
       height: 50vw;
     }
 
+    // desktop mode
+
     @include desktop {
-      width: 70vw;
+      width: 65vw;
+      height: auto;
+      margin-inline: auto;
     }
   }
 }

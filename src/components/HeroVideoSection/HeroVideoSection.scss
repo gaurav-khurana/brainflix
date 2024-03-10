@@ -29,3 +29,17 @@
     }
   }
 }
+
+// desktop mode
+
+@include desktop {
+  .hero-video {
+    width: 55vw;
+    margin-inline: auto;
+
+    &__details-container {
+      width: 52.3vw;
+      justify-content: space-between;
+    }
+  }
+}

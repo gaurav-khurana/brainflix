@@ -71,13 +71,12 @@
   }
 }
 
-//TODO - tablet mode
+// NOTE tablet mode
 
 @include tablet {
   .navbar {
     &__search {
       width: 40vw;
-      // margin-right: $desk-spacing-small;
 
       @include flexbox(row, flex-end, center);
 
@@ -90,6 +89,19 @@
 
       &-text {
         width: 35vw;
+      }
+    }
+  }
+}
+
+// NOTE desktop mode
+
+@include desktop {
+  .navbar {
+    &__search {
+      &-element {
+        // width: 20vw;
+        width: 18vw;
       }
     }
   }

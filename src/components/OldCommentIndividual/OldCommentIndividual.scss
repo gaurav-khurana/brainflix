@@ -74,4 +74,24 @@
       margin-bottom: 0.6rem;
     }
   }
+
+  // desktop mode
+
+  @include desktop {
+    .oldcomments {
+      &-individual {
+        width: 52.3vw;
+      }
+
+      &__details-container {
+        width: 52vw;
+      }
+      &__details {
+        width: 45.3vw;
+      }
+      &__text {
+        width: 46vw;
+      }
+    }
+  }
 }

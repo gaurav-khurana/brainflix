@@ -5,6 +5,7 @@ import "./Hero.scss";
 
 function Hero(props) {
   // const allVideos = useContext(allVideosContext);
+
   return (
     <section className="hero">
       {/* .filter((video, index) => index === 0) */}
@@ -13,7 +14,9 @@ function Hero(props) {
         
       ))} */}
       {/* console.log({allVideos}); */}
+
       <HeroVideoElement {...props} />
+
       {/* defaultVideo={allVideos[0]} */}
       {/* <video
         className="hero__video"

@@ -40,3 +40,16 @@
     }
   }
 }
+
+// desktop mode
+
+@include desktop {
+  .hero-video {
+    &__description {
+      width: 50.5vw;
+      &-container {
+        width: 52vw;
+      }
+    }
+  }
+}

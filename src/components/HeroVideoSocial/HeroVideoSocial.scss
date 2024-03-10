@@ -53,3 +53,25 @@
     }
   }
 }
+
+// tablet landscape mode
+
+@include tablet-landscape {
+  .hero-video {
+    &__social-container {
+      width: 20vw;
+    }
+  }
+}
+
+// desktop mode
+
+@include desktop {
+  .hero-video {
+    &__social-container {
+      width: 15vw;
+      margin-right: $desk-spacing-small;
+      margin-right: 1.5rem;
+    }
+  }
+}
