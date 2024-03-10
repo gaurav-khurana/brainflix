@@ -1,4 +1,5 @@
 import { timestampToLocaleDateString } from "../../utils/utils";
+import "./HeroVideoCreator.scss";
 
 function HeroVideoCreator(props) {
   console.log(props);
@@ -13,7 +14,7 @@ function HeroVideoCreator(props) {
   return (
     <div className="hero-video__creator-container">
       <h3 className="hero-video__name">
-        {props.defaultVideo.channel}
+        By {props.defaultVideo.channel}
         {/* By Aiden Thompson */}
       </h3>
 

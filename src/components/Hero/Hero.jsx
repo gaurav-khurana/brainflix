@@ -1,4 +1,5 @@
 import HeroVideoElement from "../HeroVideoElement/HeroVideoElement";
+import "./Hero.scss";
 // import { useContext } from "react";
 // import { allVideosContext } from "../../context/context";
 

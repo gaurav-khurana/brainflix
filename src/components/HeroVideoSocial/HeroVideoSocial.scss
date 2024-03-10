@@ -2,3 +2,40 @@
 @use "../../styles/partials/typography" as *;
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/mixins" as *;
+
+.hero-video {
+  &__social {
+    width: 8rem;
+
+    @include flexbox(row, flex-start, center);
+  }
+
+  &__social-container {
+    height: 7rem;
+
+    @include flexbox(column, space-evenly, center);
+  }
+
+  &__seen,
+  &__likes {
+    max-width: 2rem;
+    max-height: 2rem;
+    margin-right: 1rem;
+
+    &-counter {
+      display: inline-block;
+      color: $color-primary-silver;
+    }
+  }
+
+  // &__likes {
+  //   max-width: 2rem;
+  //   max-height: 2rem;
+  //   margin-right: 1.5rem;
+
+  //   &-counter {
+  //     display: inline-block;
+  //     color: $color-primary-silver;
+  //   }
+  // }
+}

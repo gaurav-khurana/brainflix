@@ -2,6 +2,7 @@ import HeroVideoCreator from "../HeroVideoCreator/HeroVideoCreator";
 import HeroVideoDescription from "../HeroVideoDescription/HeroVideoDescription";
 import HeroVideoSocial from "../HeroVideoSocial/HeroVideoSocial";
 import HeroVideoTitle from "../HeroVideoTitle/HeroVideoTitle";
+import "./HeroVideoSection.scss";
 
 function HeroVideoSection(props) {
   console.log(props);

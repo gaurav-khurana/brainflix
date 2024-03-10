@@ -1,3 +1,5 @@
+import "./HeroVideoDescription.scss";
+
 function HeroVideoDescription(props) {
   console.log(props);
 

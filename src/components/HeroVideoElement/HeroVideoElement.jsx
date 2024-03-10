@@ -1,3 +1,4 @@
+import "./HeroVideoElement.scss";
 // import { useContext } from "react";
 // import { videoContext } from "../../context/context";
 
@@ -12,8 +13,8 @@ function HeroVideoElement(props) {
       controls
       poster={props.defaultVideo.image}
       src={props.defaultVideo.video}
-      width="250"
-      height="250"
+      // width="250"
+      // height="250"
     ></video>
   );
 }

@@ -2,3 +2,15 @@
 @use "../../styles/partials/typography" as *;
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/mixins" as *;
+
+.hero-video {
+  &__title {
+    padding-right: $mob-spacing-small;
+    padding-bottom: $mob-spacing-small;
+    border-bottom: $divider-width solid $divider-color;
+
+    &-container {
+      width: 90vw;
+    }
+  }
+}

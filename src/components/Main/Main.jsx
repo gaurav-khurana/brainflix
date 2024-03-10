@@ -14,6 +14,7 @@ function Main() {
   //TODO-DO V NEED CLICK EVENT FOR HERO VIDEO ELE - if not dont pass func to hero & video sect
 
   // event handler for getting id for selected video & changing state of selected video
+
   const handleVideoItem = (videoId) => {
     // console.log(videoId);
     const foundVideo = allVideos.find((video) => video.id === videoId);

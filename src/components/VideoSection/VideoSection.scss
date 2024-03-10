@@ -2,3 +2,7 @@
 @use "../../styles/partials/typography" as *;
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/mixins" as *;
+
+.video {
+  padding: $mob-spacing-big $mob-spacing-small 0;
+}

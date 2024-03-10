@@ -1,8 +1,8 @@
-import VideoElement from "../VideoElement/VideoElement";
-// import Videos from "../../data/video-details.json";
 import "./VideoList.scss";
+import VideoElement from "../VideoElement/VideoElement";
 import { allVideosContext } from "../../context/context";
 import { useContext } from "react";
+// import Videos from "../../data/video-details.json";
 
 function VideoList(props) {
   console.log(props);
@@ -17,7 +17,7 @@ function VideoList(props) {
   return (
     <section className="nextvideos">
       <h2 className="nextvideos__heading">NEXT VIDEOS</h2>
-      <ul>
+      <ul className="nextvideos__list">
         {/* .filter((currEl, index) => index !== 2) */}
         {/* console.log(props.Videos); */}
         {/* /* console.log(props); */}
@@ -36,8 +36,8 @@ function VideoList(props) {
 
         {/* MOCK VIDEO LIST STRUCTURE */}
         {/* <VideoElement Videos={props.Video} /> */}
-        {/* <li className="nextvideos-individual">
-          <img className="nextvideos-image" src="" alt="" />
+        {/* <li className="nextvideos__individual">
+          <img className="nextvideos__image" src="" alt="" />
           <div className="nextvideos__details-container">
             <h3 className="nextvideos__title">Video 1</h3>
             <p className="nextvideos__author"></p>

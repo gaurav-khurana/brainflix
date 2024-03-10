@@ -1,3 +1,4 @@
+import "./VideoCommentsSection.scss";
 import NewCommentSection from "../NewCommentSection/NewCommentSection";
 import OldCommentsSection from "../OldCommentsSection/OldCommentsSection";
 // import { useContext } from "react";

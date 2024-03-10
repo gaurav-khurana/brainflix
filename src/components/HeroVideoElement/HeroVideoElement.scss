@@ -3,7 +3,17 @@
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/mixins" as *;
 
-video {
-  height: auto;
-  width: 100vw;
+.hero {
+  &__video {
+    width: 100vw;
+    height: auto;
+
+    @include tablet {
+      width: 90vw;
+    }
+
+    @include desktop {
+      width: 70vw;
+    }
+  }
 }

@@ -2,3 +2,20 @@
 @use "../../styles/partials/typography" as *;
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/mixins" as *;
+
+.hero-video {
+  &__description {
+    width: 90vw;
+    &-container {
+      padding: $mob-spacing-small;
+      padding-left: 0;
+      padding-bottom: 0;
+    }
+  }
+}
+
+.video-comments {
+  &__counter {
+    margin-top: $mob-spacing-small;
+  }
+}

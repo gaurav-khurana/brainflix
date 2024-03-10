@@ -5,10 +5,21 @@
 
 .navbar {
   &__search {
-    width: 85vw;
-    // background-color: red;
-    &-container {
-      width: 100vw;
+    width: 100vw;
+    margin: $mob-spacing-small 0;
+
+    @include flexbox(row, flex-start, center);
+
+    &-element {
+      width: 74vw;
+      height: 3.5rem;
+      background-color: $color-secondary-alabaster;
+      padding: 0 $mob-spacing-small;
+      margin-inline: $mob-spacing-small;
+      border: 1px solid $color-secondary-mercury;
+      border-radius: $button-radius;
+
+      @include flexbox(row, flex-start, center);
     }
 
     &-image {
@@ -22,8 +33,17 @@
     }
 
     &-text {
+      width: 70vw;
+      font-size: 1.3rem;
+      background-color: $color-secondary-alabaster;
+      margin-left: 1rem;
+      border: 0;
+
       &::placeholder {
-        color: blue;
+        color: $color-primary-black;
+      }
+      &:focus {
+        outline: 0;
       }
     }
   }
@@ -31,6 +51,8 @@
   &__userimage {
     width: 3.6rem;
     height: 3.6rem;
+    border-radius: 50%;
+    object-fit: cover;
 
     &--mobile {
       @include tablet {
@@ -42,7 +64,13 @@
       display: none;
       @include tablet {
         display: inline-block;
+        width: 4rem;
+        height: 4rem;
       }
     }
   }
+
+  // &__button-container {
+  //   // margin-bottom: $mob-spacing-small;
+  // }
 }

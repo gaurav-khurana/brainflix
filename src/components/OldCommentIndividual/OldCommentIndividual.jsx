@@ -1,4 +1,6 @@
 // import OldCommentDetails from "../OldCommentDetails/OldCommentDetails";
+import "./OldCommentIndividual.scss";
+import UserImage from "../../assets/images/Mohan-muruge.jpg";
 import { timestampToLocaleDateString } from "../../utils/utils";
 
 function OldCommentIndividual(props) {
@@ -10,7 +12,13 @@ function OldCommentIndividual(props) {
   return (
     <article className="oldcomments-individual">
       <figure className="oldcomments__image-container">
-        <img className="oldcomments__image" src="" alt="missing user" />
+        <img
+          className="oldcomments__image"
+          // src={UserImage}
+          // src={UserImage}
+          // src=""
+          alt=""
+        />
       </figure>
       {/* <OldCommentDetails {...props} /> */}
       {/* commentsArr.map((comment) => (

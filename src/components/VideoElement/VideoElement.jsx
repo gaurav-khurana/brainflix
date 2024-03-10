@@ -13,12 +13,12 @@ function VideoElement(props) {
 
   return (
     <li
-      className="nextvideos-individual"
+      className="nextvideos__individual"
       onClick={() => setSelectedVideo(props.handleVideoItem(props.video.id))}
       // onClick={() => props.handleVideoItem(props.video.id)}
     >
       <img
-        className="nextvideos-image"
+        className="nextvideos__image"
         src={props.video.image}
         alt={props.video.title}
       />

@@ -1,5 +1,7 @@
+import "./NewCommentSection.scss";
 import Button from "../Button/Button";
 import UserImage from "../../assets/images/Mohan-muruge.jpg";
+// import CommentIcon from "../../assets/icons/add_comment.svg";
 import CommentIcon from "../../assets/icons/add_comment.svg";
 
 function NewCommentSection() {
@@ -21,13 +23,22 @@ function NewCommentSection() {
       </div>
       <div className="newcomment__comment-container">
         <h3 className="newcomment__title">JOIN THE CONVERSATION</h3>
-        <input className="newcomment__input" type="textarea" />
+        <textarea
+          className="newcomment__input"
+          name="newcomment__input"
+          type="textarea"
+          rows={4}
+          cols={5}
+          resize="none"
+          placeholder="Add a new comment"
+        />
 
         <Button
           onClick={handleSubmit}
           containerClassName="newcomment__button-container"
           className="button--comment"
-          src={CommentIcon}
+          btnImageClassName="button__image--comment"
+          srcImage={CommentIcon}
           altText="Add Comment Icon"
           text="COMMENT"
         />

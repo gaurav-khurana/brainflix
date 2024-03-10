@@ -5,11 +5,14 @@
 
 .header {
   width: 100vw;
+  padding: 0 $mob-spacing-small;
+
   @include flexbox(column, center, center);
   // background-color: red;
 }
 
 .logo {
-  height: 3.6rem;
+  max-height: 2.5rem;
+  max-width: 12rem;
   margin-top: $mob-spacing-small;
 }

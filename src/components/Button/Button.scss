@@ -4,9 +4,57 @@
 @use "../../styles/partials/mixins" as *;
 
 .button {
-  width: 100vw;
-  height: 40px;
+  display: inline-block;
+  width: 90vw;
+  max-height: 40px;
   height: $button-height;
-  background-color: gold;
+  background-color: $color-primary-blue;
+  color: $color-primary-white;
+  border: 0;
+  border-radius: $button-radius;
+  text-align: center;
   cursor: pointer;
+
+  @include flexbox(row, center, center);
+
+  &:hover {
+    background-color: $color-secondary-dark-blue;
+  }
+
+  &__image {
+    color: $color-primary-white;
+    height: 2rem;
+    width: 2rem;
+    margin-left: 1rem;
+    // margin-right: 7rem;
+    // border-radius: 50%;
+
+    &--navbar {
+      margin-right: 9rem;
+    }
+    &--comment {
+      margin-right: 5rem;
+    }
+  }
+
+  &--navbar,
+  &--comment {
+    @include flexbox(row, flex-start, center);
+  }
+
+  &--navbar {
+    width: 90vw;
+  }
+
+  &--comment {
+    width: 75vw;
+  }
+}
+
+// .navbar__button-container {
+//   // width: 100vw;
+//   // @include flexbox(row, flex-start, center);
+// }
+.newcomment__button-container {
+  // height: 3rem;
 }

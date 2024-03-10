@@ -8,6 +8,7 @@ function Header() {
       <div className="logo-container">
         <img className="logo" src={BrainflixLogo} alt="BrainFlix logo" />
       </div>
+
       <NavBar />
       {/* <nav className="navbar">
         <div className="navbar__search-container">

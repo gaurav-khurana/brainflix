@@ -2,3 +2,29 @@
 @use "../../styles/partials/typography" as *;
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/mixins" as *;
+
+.nextvideos {
+  &__individual {
+    margin-bottom: $mob-spacing-small;
+
+    @include flexbox(row, flex-start, center);
+  }
+
+  &__image {
+    height: 6rem;
+    width: 10rem;
+    border-radius: $button-radius;
+    margin-right: $mob-spacing-small;
+    background-color: $color-secondary-mercury;
+  }
+
+  &__details-container {
+    height: 6rem;
+
+    @include flexbox(column, space-between, flex-start);
+  }
+
+  &__title {
+    margin-bottom: 0.5rem;
+  }
+}

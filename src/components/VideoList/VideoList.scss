@@ -2,3 +2,17 @@
 @use "../../styles/partials/typography" as *;
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/mixins" as *;
+
+.nextvideos {
+  margin-top: $mob-spacing-big;
+  padding: $mob-spacing-small;
+  padding-top: 0;
+
+  &__heading {
+    color: $color-primary-silver;
+    margin-bottom: $mob-spacing-small;
+  }
+
+  &__list {
+  }
+}

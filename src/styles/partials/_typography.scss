@@ -25,3 +25,47 @@
 }
 
 // NOTE - mobile styles
+
+// page header - 2.4rem; line height - 32px; wt 700
+// section header - 1.2rem; line height - 20px; wt 700
+// sub-header - 1.3rem; line height - 18px; wt 700
+// body - 1.3rem; line height - 18px; wt 400
+// labels + button - 1rem; line height - 20px; wt 700
+
+.hero-video__title {
+  font-size: $mob-font-header;
+  line-height: 32px;
+  font-weight: 700;
+}
+.newcomment__title {
+  font-size: $mob-font-section-header;
+  line-height: 2rem;
+  font-weight: 600;
+}
+.hero-video__name,
+.video-comments__counter,
+.oldcomments__name,
+.nextvideos__heading,
+.nextvideos__title,
+.button {
+  font-size: $mob-font-subheader-body;
+  line-height: 2rem;
+  font-weight: 600;
+}
+
+.hero-video__date,
+.hero-video__seen-counter,
+.hero-video__likes-counter,
+.oldcomments__date,
+.oldcomments__text,
+.nextvideos__channel {
+  font-size: $mob-font-subheader-body;
+  line-height: 1.8rem;
+}
+
+.hero-video__description,
+.newcomment__input,
+.button--comment,
+.button--navbar {
+  font-size: $mob-font-subheader-body;
+}

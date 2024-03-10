@@ -2,3 +2,16 @@
 @use "../../styles/partials/typography" as *;
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/mixins" as *;
+
+.hero-video {
+  &__creator-container {
+    height: 7rem;
+    margin-right: 4rem;
+
+    @include flexbox(column, space-evenly, flex-start);
+  }
+
+  &__date {
+    color: $color-primary-silver;
+  }
+}

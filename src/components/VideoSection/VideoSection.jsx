@@ -1,3 +1,4 @@
+import "./VideoSection.scss";
 // import { useContext } from "react";
 import HeroVideoSection from "../HeroVideoSection/HeroVideoSection";
 import VideoCommentsSection from "../VideoCommentsSection/VideoCommentsSection";

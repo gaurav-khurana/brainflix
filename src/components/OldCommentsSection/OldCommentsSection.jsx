@@ -1,3 +1,4 @@
+import "./OldCommentsSection.scss";
 import OldCommentIndividual from "../OldCommentIndividual/OldCommentIndividual";
 
 function OldCommentsSection(props) {

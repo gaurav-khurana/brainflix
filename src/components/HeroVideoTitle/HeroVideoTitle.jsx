@@ -1,3 +1,5 @@
+import "./HeroVideoTitle.scss";
+
 function HeroVideoTitle(props) {
   console.log(props);
   return (

@@ -2,3 +2,50 @@
 @use "../../styles/partials/typography" as *;
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/mixins" as *;
+
+.newcomment {
+  width: 90vw;
+  margin-top: $mob-spacing-big;
+  padding-bottom: $mob-spacing-small;
+  border-bottom: $divider-width solid $divider-color;
+
+  @include flexbox(row, center, center);
+
+  &__userimage {
+    width: 3.6rem;
+    height: 3.6rem;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 1.2rem;
+
+    &-container {
+      height: 12.5rem;
+
+      @include flexbox(column, flex-start, flex-start);
+    }
+  }
+
+  &__comment-container {
+    width: 75vw;
+  }
+
+  &__title {
+    color: $color-primary-silver;
+    margin-bottom: 0.4rem;
+  }
+
+  &__input {
+    width: 75vw;
+    height: 10rem;
+    resize: none;
+    padding: 1rem;
+    background-color: $color-secondary-alabaster;
+    border-radius: $button-radius;
+    border-color: $color-secondary-mercury;
+    margin-bottom: $mob-spacing-small;
+
+    &::placeholder {
+      color: $color-primary-black;
+    }
+  }
+}
