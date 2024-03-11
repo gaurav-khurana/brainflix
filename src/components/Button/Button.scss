@@ -31,7 +31,7 @@
       margin-right: 9rem;
     }
     &--comment {
-      margin-right: 5rem;
+      margin-right: 6rem;
     }
   }
 
@@ -57,7 +57,23 @@
 //   // height: 3rem;
 // }
 
-//NOTE  tablet mode
+// mobile wide screen mode
+
+@include mobile-wide {
+  .button {
+    &__image {
+      &--navbar {
+        margin-right: 35vw;
+      }
+
+      &--comment {
+        margin-right: 25vw;
+      }
+    }
+  }
+}
+
+// tablet mode
 
 @include tablet {
   .button {
@@ -89,7 +105,27 @@
   }
 }
 
-// NOTE desktop mode
+// tablet - landscape mode
+
+@include tablet-landscape {
+  .button {
+    &--navbar {
+      width: 15vw;
+    }
+
+    &--comment {
+      width: 15vw;
+      margin-left: 8rem;
+    }
+  }
+
+  .navbar__button-container {
+    width: 15vw;
+    margin-right: $mob-spacing-small;
+  }
+}
+
+// desktop mode
 
 @include desktop {
   .button {
@@ -102,17 +138,8 @@
       width: 14vw;
       // margin-right: 0;
     }
-
-    &__image {
-      &--navbar {
-        // margin-right: 3rem;
-      }
-
-      &--comment {
-        // margin-right: $desk-spacing-small;
-      }
-    }
   }
+
   .newcomment__button-container {
     width: 15.5vw;
     // height: 4.5rem;

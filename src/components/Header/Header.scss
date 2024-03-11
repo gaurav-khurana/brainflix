@@ -17,6 +17,13 @@
     @include flexbox(row, flex-start, center);
   }
 
+  // tablet - landscape mode
+
+  @include tablet-landscape {
+    width: 94vw;
+    margin-inline: auto;
+  }
+
   // desktop mode
 
   @include desktop {

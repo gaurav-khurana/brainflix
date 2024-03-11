@@ -56,6 +56,18 @@
   }
 }
 
+// mobile wide screen mode
+
+@include mobile-wide {
+  .oldcomments {
+    &__image {
+      &-container {
+        height: 10rem;
+      }
+    }
+  }
+}
+
 // tablet mode
 
 @include tablet {

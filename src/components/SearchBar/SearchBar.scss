@@ -8,14 +8,15 @@
     width: 100vw;
     margin: $mob-spacing-small 0;
 
-    @include flexbox(row, flex-start, center);
+    // @include flexbox(row, flex-start, center);
+    @include flexbox(row, space-evenly, center);
 
     &-element {
       width: 74vw;
       height: 3.5rem;
       background-color: $color-secondary-alabaster;
       padding: 0 $mob-spacing-small;
-      margin-inline: $mob-spacing-small;
+      // margin-inline: $mob-spacing-small;
       border: 1px solid $color-secondary-mercury;
       border-radius: $button-radius;
 
@@ -71,7 +72,7 @@
   }
 }
 
-// NOTE tablet mode
+// tablet mode
 
 @include tablet {
   .navbar {
@@ -94,7 +95,19 @@
   }
 }
 
-// NOTE desktop mode
+// tablet - landscape mode
+
+@include tablet-landscape {
+  .navbar {
+    &__search {
+      &-element {
+        max-width: 23vw;
+      }
+    }
+  }
+}
+
+// desktop mode
 
 @include desktop {
   .navbar {

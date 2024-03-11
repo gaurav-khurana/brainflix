@@ -51,7 +51,19 @@
   }
 }
 
-//TODO - TABLET MODE
+// mobile wide screen mode
+
+@include mobile-wide {
+  .newcomment {
+    &__userimage {
+      &-container {
+        height: 15.5rem;
+      }
+    }
+  }
+}
+
+// tablet mode
 
 @include tablet {
   .newcomment {
