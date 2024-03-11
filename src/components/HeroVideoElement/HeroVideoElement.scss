@@ -1,0 +1,26 @@
+@use "../../styles/partials/global" as *;
+@use "../../styles/partials/typography" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.hero {
+  &__video {
+    width: 100vw;
+    height: auto;
+
+    // tablet mode
+
+    @include tablet {
+      width: 90vw;
+      height: 50vw;
+    }
+
+    // desktop mode
+
+    @include desktop {
+      width: 65vw;
+      height: auto;
+      margin-inline: auto;
+    }
+  }
+}

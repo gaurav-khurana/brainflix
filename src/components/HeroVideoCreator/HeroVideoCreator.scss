@@ -1,0 +1,49 @@
+@use "../../styles/partials/global" as *;
+@use "../../styles/partials/typography" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.hero-video {
+  &__creator-container {
+    height: 7rem;
+    margin-right: 4rem;
+
+    @include flexbox(column, space-evenly, flex-start);
+  }
+
+  &__date {
+    color: $color-primary-silver;
+  }
+}
+
+// tablet mode
+
+@include tablet {
+  .hero-video {
+    &__creator-container {
+      height: 4rem;
+      width: 30vw;
+      @include flexbox(row, space-between, center);
+    }
+  }
+}
+
+// tablet landscape mode
+
+@include tablet-landscape {
+  .hero-video {
+    &__creator-container {
+      width: 24vw;
+    }
+  }
+}
+
+// desktop mode
+
+@include desktop {
+  .hero-video {
+    &__creator-container {
+      width: 17vw;
+    }
+  }
+}

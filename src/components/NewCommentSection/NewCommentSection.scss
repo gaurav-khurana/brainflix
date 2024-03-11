@@ -1,0 +1,107 @@
+@use "../../styles/partials/global" as *;
+@use "../../styles/partials/typography" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.newcomment {
+  width: 90vw;
+  margin-top: $mob-spacing-big;
+  padding-bottom: $mob-spacing-small;
+  border-bottom: $divider-width solid $divider-color;
+
+  @include flexbox(row, center, center);
+  flex-wrap: wrap;
+
+  &__userimage {
+    width: 3.6rem;
+    height: 3.6rem;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 1.2rem;
+
+    &-container {
+      height: 15.5rem;
+
+      @include flexbox(column, flex-start, flex-start);
+    }
+  }
+
+  &__comment-container {
+    width: 75vw;
+  }
+
+  &__input {
+    width: 75vw;
+    height: 10rem;
+    resize: none;
+    padding: 1rem;
+    background-color: $color-secondary-alabaster;
+    border-radius: $button-radius;
+    border-color: $color-secondary-mercury;
+    margin-bottom: $mob-spacing-small;
+
+    &::placeholder {
+      color: $color-primary-black;
+    }
+  }
+}
+
+// mobile wide screen mode
+
+@include mobile-wide {
+  .newcomment {
+    &__userimage {
+      &-container {
+        height: 15.5rem;
+      }
+    }
+  }
+}
+
+// tablet mode
+
+@include tablet {
+  .newcomment {
+    @include flexbox(row, flex-start, center);
+
+    &__userimage {
+      width: 4rem;
+      height: 4rem;
+      margin-right: 2rem;
+
+      &-container {
+        height: 5.5rem;
+      }
+    }
+
+    &__comment-container {
+      width: 82vw;
+
+      @include flexbox(row, flex-start, flex-start);
+    }
+
+    &__input {
+      width: 80vw;
+      height: 4.5rem;
+      margin-right: $desk-spacing-small;
+    }
+  }
+
+  // desktop mode
+
+  @include desktop {
+    .newcomment {
+      width: 52.3vw;
+
+      &__comment {
+        &-container {
+          width: 47vw;
+        }
+      }
+
+      &__input {
+        width: 30vw;
+      }
+    }
+  }
+}

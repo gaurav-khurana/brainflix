@@ -1,0 +1,65 @@
+@use "../../styles/partials/global" as *;
+@use "../../styles/partials/typography" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.hero-video {
+  &__social {
+    width: 8rem;
+
+    @include flexbox(row, flex-start, center);
+  }
+
+  &__social-container {
+    height: 7rem;
+
+    @include flexbox(column, space-evenly, center);
+  }
+
+  &__seen,
+  &__likes {
+    max-width: 2rem;
+    max-height: 2rem;
+    margin-right: 1rem;
+
+    &-counter {
+      display: inline-block;
+      color: $color-primary-silver;
+    }
+  }
+}
+
+// tablet mode
+
+@include tablet {
+  .hero-video {
+    &__social-container {
+      height: 4rem;
+
+      width: 25vw;
+      @include flexbox(row, space-between, center);
+    }
+  }
+}
+
+// tablet landscape mode
+
+@include tablet-landscape {
+  .hero-video {
+    &__social-container {
+      width: 20vw;
+    }
+  }
+}
+
+// desktop mode
+
+@include desktop {
+  .hero-video {
+    &__social-container {
+      width: 15vw;
+      margin-right: $desk-spacing-small;
+      margin-right: 1.5rem;
+    }
+  }
+}

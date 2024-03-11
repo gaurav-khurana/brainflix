@@ -1,0 +1,21 @@
+@use "../../styles/partials/global" as *;
+@use "../../styles/partials/typography" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.video {
+  padding: $mob-spacing-big $mob-spacing-small 0;
+
+  // tablet mode
+
+  @include tablet {
+    padding: $desk-spacing-big;
+    padding-bottom: 0;
+  }
+
+  // desktop mode
+
+  @include desktop {
+    width: 55vw;
+  }
+}

@@ -1,0 +1,55 @@
+@use "../../styles/partials/global" as *;
+@use "../../styles/partials/typography" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.hero-video {
+  &__description {
+    width: 90vw;
+
+    &-container {
+      padding: $mob-spacing-small;
+      padding-left: 0;
+      padding-bottom: 0;
+    }
+  }
+}
+
+.video-comments {
+  &__counter {
+    margin-top: $mob-spacing-small;
+  }
+}
+
+// tablet mode
+
+@include tablet {
+  .hero-video {
+    &__description {
+      width: 88vw;
+
+      &-container {
+        padding-top: $desk-spacing-small;
+      }
+    }
+  }
+
+  .video-comments {
+    &__counter {
+      margin-top: $desk-spacing-small;
+    }
+  }
+}
+
+// desktop mode
+
+@include desktop {
+  .hero-video {
+    &__description {
+      width: 50.5vw;
+      &-container {
+        width: 52vw;
+      }
+    }
+  }
+}

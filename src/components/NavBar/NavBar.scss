@@ -1,0 +1,33 @@
+@use "../../styles/partials/global" as *;
+@use "../../styles/partials/typography" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.navbar {
+  width: 100vw;
+
+  @include flexbox(column, center, center);
+
+  // tablet mode
+
+  @include tablet {
+    width: 73.5vw;
+
+    @include flexbox(row, flex-end, center);
+  }
+
+  // tablet - landscape mode{
+
+  @include tablet-landscape {
+    max-width: 65vw;
+    margin-left: 21rem;
+  }
+
+  // desktop mode
+
+  @include desktop {
+    width: 65vw;
+    // margin-left: 10.7rem;
+    margin-left: 3.7rem;
+  }
+}

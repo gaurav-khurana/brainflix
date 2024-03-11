@@ -1,0 +1,46 @@
+@use "../../styles/partials/global" as *;
+@use "../../styles/partials/typography" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.header {
+  width: 100vw;
+  padding: 0 $mob-spacing-small;
+
+  @include flexbox(column, center, center);
+
+  // tablet mode
+
+  @include tablet {
+    padding: 0 $desk-spacing-big;
+
+    @include flexbox(row, flex-start, center);
+  }
+
+  // tablet - landscape mode
+
+  @include tablet-landscape {
+    width: 94vw;
+    margin-inline: auto;
+  }
+
+  // desktop mode
+
+  @include desktop {
+    width: 85vw;
+    margin-inline: auto;
+  }
+}
+
+.logo {
+  max-height: 2.5rem;
+  max-width: 12rem;
+  margin-top: $mob-spacing-small;
+
+  // tablet mode
+
+  @include tablet {
+    margin-bottom: $mob-spacing-small;
+    margin-left: 1rem;
+  }
+}

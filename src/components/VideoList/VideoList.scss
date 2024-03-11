@@ -1,0 +1,41 @@
+@use "../../styles/partials/global" as *;
+@use "../../styles/partials/typography" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.nextvideos {
+  margin-top: $mob-spacing-big;
+  padding: $mob-spacing-small;
+  padding-top: 0;
+
+  &__heading {
+    color: $color-primary-silver;
+    margin-bottom: $mob-spacing-small;
+  }
+}
+
+// tablet mode
+
+@include tablet {
+  .nextvideos {
+    width: 48vw;
+    padding-bottom: 1rem;
+    margin-top: 0;
+    padding: $desk-spacing-small $desk-spacing-big 1rem;
+
+    &__heading {
+      margin-bottom: $desk-spacing-small;
+    }
+  }
+}
+
+// desktop mode
+
+@include desktop {
+  .nextvideos {
+    width: 25vw;
+    border-left: $divider-width solid $divider-color;
+    padding-left: $mob-spacing-big;
+    padding-bottom: $mob-spacing-big;
+  }
+}

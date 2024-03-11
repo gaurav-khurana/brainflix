@@ -1,0 +1,115 @@
+@use "../../styles/partials/global" as *;
+@use "../../styles/partials/typography" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.navbar {
+  &__search {
+    width: 100vw;
+    margin: $mob-spacing-small 0;
+
+    @include flexbox(row, space-evenly, center);
+
+    &-element {
+      width: 74vw;
+      height: 3.5rem;
+      background-color: $color-secondary-alabaster;
+      padding: 0 $mob-spacing-small;
+      border: 1px solid $color-secondary-mercury;
+      border-radius: $button-radius;
+
+      @include flexbox(row, flex-start, center);
+    }
+
+    &-image {
+      width: 1.2rem;
+      height: 1.2rem;
+    }
+
+    &-text {
+      width: 70vw;
+      font-size: 1.3rem;
+      background-color: $color-secondary-alabaster;
+      margin-left: 1rem;
+      border: 0;
+
+      &::placeholder {
+        color: $color-primary-black;
+      }
+      &:focus {
+        outline: 0;
+      }
+    }
+  }
+
+  &__userimage {
+    width: 3.6rem;
+    height: 3.6rem;
+    border-radius: 50%;
+    object-fit: cover;
+
+    &--mobile {
+      @include tablet {
+        display: none;
+      }
+    }
+
+    &--tablet {
+      display: none;
+
+      @include tablet {
+        display: inline-block;
+        width: 4rem;
+        height: 4rem;
+      }
+    }
+  }
+}
+
+// tablet mode
+
+@include tablet {
+  .navbar {
+    &__search {
+      width: 40vw;
+
+      @include flexbox(row, flex-end, center);
+
+      &-element {
+        // width: 35vw;
+        width: 30vw;
+        height: 4rem;
+        margin-right: $desk-spacing-small;
+      }
+
+      &-text {
+        width: 35vw;
+      }
+    }
+  }
+}
+
+// tablet - landscape mode
+
+@include tablet-landscape {
+  .navbar {
+    &__search {
+      &-element {
+        max-width: 23vw;
+      }
+    }
+  }
+}
+
+// desktop mode
+
+@include desktop {
+  .navbar {
+    &__search {
+      &-element {
+        // width: 20vw;
+        width: 18vw;
+      }
+    }
+  }
+}

@@ -1,0 +1,14 @@
+@use "../partials/variables" as *;
+@use "../partials/mixins" as *;
+@use "../partials/typography" as *;
+
+// universal css rules
+
+* {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  margin: 0;
+  padding: 0;
+  font-family: "Avenir Next";
+  font-weight: 400;
+}

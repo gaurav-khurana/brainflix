@@ -1,0 +1,71 @@
+@use "../../styles/partials/global" as *;
+@use "../../styles/partials/typography" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.nextvideos {
+  &__individual {
+    margin-bottom: $mob-spacing-small;
+
+    @include flexbox(row, flex-start, center);
+  }
+
+  &__image {
+    height: 6rem;
+    width: 10rem;
+    border-radius: $button-radius;
+    margin-right: $mob-spacing-small;
+    background-color: $color-secondary-mercury;
+    object-fit: cover;
+  }
+
+  &__details-container {
+    height: 6.4rem;
+
+    @include flexbox(column, space-between, flex-start);
+  }
+
+  &__title {
+    margin-bottom: 0.5rem;
+  }
+}
+
+// tablet mode
+
+@include tablet {
+  .nextvideos {
+    &__individual {
+      margin-bottom: $desk-spacing-small;
+    }
+
+    &__image {
+      height: 7rem;
+      width: 11rem;
+    }
+
+    &__details-container {
+      height: 7.4rem;
+    }
+  }
+
+  // desktop mode
+
+  @include desktop {
+    .nextvideos {
+      width: 30vw;
+
+      &__individual {
+        margin-bottom: 2rem;
+      }
+
+      &__image {
+        height: 6.5rem;
+        width: 10.7rem;
+      }
+
+      &__details-container {
+        width: 20vw;
+      }
+    }
+  }
+}

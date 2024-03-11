@@ -1,0 +1,17 @@
+@use "../../styles/partials/global" as *;
+@use "../../styles/partials/typography" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.hero {
+  margin-top: $mob-spacing-small;
+  background-color: $color-secondary-dark-black;
+  opacity: 50%;
+
+  // tablet mode
+
+  @include tablet {
+    margin-top: 0;
+    @include flexbox(row, center, center);
+  }
+}

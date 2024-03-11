@@ -1,0 +1,98 @@
+@use "../../styles/partials/global" as *;
+@use "../../styles/partials/typography" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.oldcomments {
+  &-individual {
+    width: 90vw;
+    border-bottom: $divider-width solid $divider-color;
+    padding: $mob-spacing-small 0;
+
+    @include flexbox(row, flex-start, center);
+  }
+
+  &__image {
+    width: 3.6rem;
+    height: 3.6rem;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 1.2rem;
+    background-color: $color-secondary-mercury;
+
+    &-container {
+      height: 12rem;
+
+      @include flexbox(column, flex-start, center);
+
+      @include tablet {
+        height: 6rem;
+      }
+    }
+  }
+
+  &__details {
+    margin-bottom: 1.2rem;
+    @include flexbox(row, space-between, center);
+  }
+
+  &__date {
+    color: $color-primary-silver;
+  }
+
+  &__text {
+    word-wrap: break-word;
+  }
+}
+
+// mobile wide screen mode
+
+@include mobile-wide {
+  .oldcomments {
+    &__image {
+      &-container {
+        height: 10rem;
+      }
+    }
+  }
+}
+
+// tablet mode
+
+@include tablet {
+  .oldcomments {
+    &-individual {
+      padding: $desk-spacing-small 0;
+    }
+
+    &__image {
+      width: 4rem;
+      height: 4rem;
+      margin-right: $desk-spacing-small;
+    }
+
+    &__details {
+      margin-bottom: 0.6rem;
+    }
+  }
+
+  // desktop mode
+
+  @include desktop {
+    .oldcomments {
+      &-individual {
+        width: 52.3vw;
+      }
+
+      &__details-container {
+        width: 52vw;
+      }
+      &__details {
+        width: 45.3vw;
+      }
+      &__text {
+        width: 46vw;
+      }
+    }
+  }
+}

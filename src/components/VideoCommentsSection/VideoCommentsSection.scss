@@ -1,0 +1,23 @@
+@use "../../styles/partials/global" as *;
+@use "../../styles/partials/typography" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.newcomment__title {
+  width: 100vw;
+  color: $color-primary-silver;
+  margin-left: 4.8rem;
+  margin-bottom: 0.4rem;
+
+  // tablet mode
+
+  @include tablet {
+    margin-left: 6.2rem;
+  }
+
+  // desktop mode
+
+  @include desktop {
+    width: 52vw;
+  }
+}
