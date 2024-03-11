@@ -21,7 +21,7 @@
     width: 48vw;
     padding-bottom: 1rem;
     margin-top: 0;
-    padding: $desk-spacing-small $desk-spacing-big 0;
+    padding: $desk-spacing-small $desk-spacing-big 1rem;
 
     &__heading {
       margin-bottom: $desk-spacing-small;
@@ -36,5 +36,6 @@
     width: 25vw;
     border-left: $divider-width solid $divider-color;
     padding-left: $mob-spacing-big;
+    padding-bottom: $mob-spacing-big;
   }
 }

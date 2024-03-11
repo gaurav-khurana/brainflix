@@ -126,6 +126,12 @@
     &--comment {
       width: 14vw;
     }
+
+    &__image {
+      &--comment {
+        margin-right: 3rem;
+      }
+    }
   }
 
   .newcomment__button-container {

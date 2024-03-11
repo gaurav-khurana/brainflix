@@ -11,7 +11,7 @@
   // tablet mode
 
   @include tablet {
-    width: 75vw;
+    width: 73.5vw;
 
     @include flexbox(row, flex-end, center);
   }

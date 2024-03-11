@@ -24,11 +24,6 @@
     &-image {
       width: 1.2rem;
       height: 1.2rem;
-
-      @include tablet {
-        width: 1.2rem;
-        height: 1.2rem;
-      }
     }
 
     &-text {
@@ -61,6 +56,7 @@
 
     &--tablet {
       display: none;
+
       @include tablet {
         display: inline-block;
         width: 4rem;
