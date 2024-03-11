@@ -8,7 +8,6 @@
     width: 100vw;
     margin: $mob-spacing-small 0;
 
-    // @include flexbox(row, flex-start, center);
     @include flexbox(row, space-evenly, center);
 
     &-element {
@@ -16,7 +15,6 @@
       height: 3.5rem;
       background-color: $color-secondary-alabaster;
       padding: 0 $mob-spacing-small;
-      // margin-inline: $mob-spacing-small;
       border: 1px solid $color-secondary-mercury;
       border-radius: $button-radius;
 

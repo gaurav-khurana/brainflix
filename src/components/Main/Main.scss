@@ -3,11 +3,8 @@
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/mixins" as *;
 
-.main--mobile {
-  // @include flexbox()
-}
-
 // desktop mode
+
 @include desktop {
   .main--desktop {
     @include flexbox(row, center, flex-start);

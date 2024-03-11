@@ -19,17 +19,6 @@
     object-fit: cover;
     margin-right: 1.2rem;
     background-color: $color-secondary-mercury;
-    // overflow: hidden;
-
-    // &[src] {
-    //   // content: "";
-    //   // margin-left: -5rem;
-    //   // transform: translateX(10rem);
-    // }
-    // dont need alt prop as used '' as alt
-    // &[alt] {
-    //   text-indent: -5rem;
-    // }
 
     &-container {
       height: 12rem;

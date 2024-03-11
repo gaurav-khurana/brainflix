@@ -27,17 +27,6 @@
       color: $color-primary-silver;
     }
   }
-
-  // &__likes {
-  //   max-width: 2rem;
-  //   max-height: 2rem;
-  //   margin-right: 1.5rem;
-
-  //   &-counter {
-  //     display: inline-block;
-  //     color: $color-primary-silver;
-  //   }
-  // }
 }
 
 // tablet mode
@@ -49,7 +38,6 @@
 
       width: 25vw;
       @include flexbox(row, space-between, center);
-      // @include flexbox(row, flex-start, center);
     }
   }
 }

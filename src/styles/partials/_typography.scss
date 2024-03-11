@@ -24,24 +24,20 @@
   font-style: normal;
 }
 
-// NOTE - mobile styles
-
-// page header - 2.4rem; line height - 32px; wt 700
-// section header - 1.2rem; line height - 20px; wt 700
-// sub-header - 1.3rem; line height - 18px; wt 700
-// body - 1.3rem; line height - 18px; wt 400
-// labels + button - 1rem; line height - 20px; wt 700
+// mobile styles
 
 .hero-video__title {
   font-size: $mob-font-header;
   line-height: 32px;
   font-weight: 700;
 }
+
 .newcomment__title {
   font-size: $mob-font-section-header;
   line-height: 2rem;
   font-weight: 600;
 }
+
 .hero-video__name,
 .video-comments__counter,
 .oldcomments__name,
@@ -67,23 +63,26 @@
 .newcomment__input {
   font-size: $mob-font-subheader-body;
 }
+
 .button--comment,
 .button--navbar {
   font-size: $mob-font-subheader-body;
   font-weight: 600;
 }
 
-//NOTE tablet mode
+// tablet mode
 
 @include tablet {
   .hero-video__title {
     font-size: $desk-font-header;
     line-height: 4.4rem;
   }
+
   .newcomment__title {
     font-size: $desk-font-section-header;
     line-height: 2rem;
   }
+
   .hero-video__name,
   .video-comments__counter,
   .oldcomments__name,
@@ -109,6 +108,7 @@
     font-size: $desk-font-subheader-body;
     line-height: 2rem;
   }
+
   .button--comment,
   .button--navbar {
     font-size: $desk-font-subheader-body;

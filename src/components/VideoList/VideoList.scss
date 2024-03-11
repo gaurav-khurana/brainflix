@@ -8,23 +8,10 @@
   padding: $mob-spacing-small;
   padding-top: 0;
 
-  // tablet mode
-  @include tablet {
-    // margin-top: 0;
-    // padding: $desk-spacing-small $desk-spacing-big 0;
-  }
-
   &__heading {
     color: $color-primary-silver;
     margin-bottom: $mob-spacing-small;
-
-    // tablet mode
-    @include tablet {
-      margin-bottom: $desk-spacing-small;
-    }
   }
-
-  // &__list {}
 }
 
 // tablet mode
@@ -35,6 +22,10 @@
     padding-bottom: 1rem;
     margin-top: 0;
     padding: $desk-spacing-small $desk-spacing-big 0;
+
+    &__heading {
+      margin-bottom: $desk-spacing-small;
+    }
   }
 }
 

@@ -1,8 +1,11 @@
-// func to convert timestamp to date
+// func to convert timestamp to date (mm/dd/yyyy)
+
 function timestampToLocaleDateString(timestamp) {
   const date = new Date(timestamp);
   return date.toLocaleDateString("en-US");
 }
+
+// function for dynamic timestamp
 
 function dynamicTimestamp(timestamp) {
   const currentTime = Date.now();

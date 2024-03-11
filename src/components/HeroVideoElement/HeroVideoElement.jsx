@@ -1,10 +1,6 @@
 import "./HeroVideoElement.scss";
-// import { useContext } from "react";
-// import { videoContext } from "../../context/context";
 
 function HeroVideoElement(props) {
-  // const video = useContext(videoContext);
-
   return (
     <video
       className="hero__video"

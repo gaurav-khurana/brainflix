@@ -1,15 +1,13 @@
 import "./NewCommentSection.scss";
 import Button from "../Button/Button";
 import UserImage from "../../assets/images/Mohan-muruge.jpg";
-// import CommentIcon from "../../assets/icons/add_comment.svg";
+
 import CommentIcon from "../../assets/icons/add_comment.svg";
 
 function NewCommentSection() {
-  // NOTE - event handler to Submit Form
-
+  // event handler to Submit Form - sprint 2
   function handleSubmit(event) {
     event.preventDefault();
-    console.log(event);
   }
 
   return (
@@ -44,13 +42,6 @@ function NewCommentSection() {
           altText="Add Comment Icon"
           text="COMMENT"
         />
-
-        {/* <div className="newcomment__button-container">
-          <img className="button button--comment" src="" alt="" />
-          <img className="newcomment__button-image" src="" alt="" />
-          <p className="newcomment__button-text"></p>
-          <p className="button button__text"></p>
-        </div> */}
       </div>
     </article>
   );

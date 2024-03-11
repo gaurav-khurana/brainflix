@@ -24,8 +24,6 @@
     height: 2rem;
     width: 2rem;
     margin-left: 1rem;
-    // margin-right: 7rem;
-    // border-radius: 50%;
 
     &--navbar {
       margin-right: 9rem;
@@ -48,14 +46,6 @@
     width: 75vw;
   }
 }
-
-// .navbar__button-container {
-//   // width: 100vw;
-//   // @include flexbox(row, flex-start, center);
-// }
-// .newcomment__button-container {
-//   // height: 3rem;
-// }
 
 // mobile wide screen mode
 
@@ -131,17 +121,14 @@
   .button {
     &--navbar {
       width: 12vw;
-      // margin-right: $desk-spacing-small;
     }
 
     &--comment {
       width: 14vw;
-      // margin-right: 0;
     }
   }
 
   .newcomment__button-container {
     width: 15.5vw;
-    // height: 4.5rem;
   }
 }
