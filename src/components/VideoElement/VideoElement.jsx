@@ -3,7 +3,7 @@ import "./VideoElement.scss";
 function VideoElement(props) {
   // state func to set selected video
   function setSelectedVideo(selectedVideo) {
-    return selectedVideo === props.video;
+    return selectedVideo === props.video.id;
   }
 
   return (
