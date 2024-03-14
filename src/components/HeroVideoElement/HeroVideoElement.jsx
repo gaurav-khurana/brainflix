@@ -5,8 +5,8 @@ function HeroVideoElement(props) {
     <video
       className="hero__video"
       controls
-      poster={props.defaultVideo.image}
-      src={props.defaultVideo.video}
+      poster={props.selectedVideo.image}
+      src={props.selectedVideo.video}
     ></video>
   );
 }

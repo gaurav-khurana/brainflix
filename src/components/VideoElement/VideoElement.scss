@@ -30,6 +30,14 @@
   }
 }
 
+a {
+  text-decoration: none;
+  &:visited,
+  &:link {
+    color: $color-primary-black;
+  }
+}
+
 // tablet mode
 
 @include tablet {

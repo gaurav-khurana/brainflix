@@ -1,28 +1,28 @@
+import { Link } from "react-router-dom";
 import "./VideoElement.scss";
 
 function VideoElement(props) {
-  // state func to set selected video
-  function setSelectedVideo(selectedVideo) {
-    return selectedVideo === props.video.id;
-  }
-
   return (
-    <li
-      className="nextvideos__individual"
-      onClick={() => setSelectedVideo(props.handleVideoItem(props.video.id))}
-    >
-      <img
-        className="nextvideos__image"
-        src={props.video.image}
-        alt={props.video.title}
-      />
+    // <Link to=`props.video.id` /> params way of doing it
+    <>
+      <Link to={`/videos/${props.video.id}`}>
+        <li className="nextvideos__individual">
+          {/* <Navigate to={`/videos/${props.video.id}`} /> */}
+          {/* <Navigate to={`/`} /> */}
+          <img
+            className="nextvideos__image"
+            src={props.video.image}
+            alt={props.video.title}
+          />
 
-      <div className="nextvideos__details-container">
-        <h3 className="nextvideos__title">{props.video.title}</h3>
+          <div className="nextvideos__details-container">
+            <h3 className="nextvideos__title">{props.video.title}</h3>
 
-        <p className="nextvideos__channel">{props.video.channel}</p>
-      </div>
-    </li>
+            <p className="nextvideos__channel">{props.video.channel}</p>
+          </div>
+        </li>
+      </Link>
+    </>
   );
 }
 

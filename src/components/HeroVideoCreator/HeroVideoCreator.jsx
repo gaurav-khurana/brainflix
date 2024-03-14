@@ -4,10 +4,10 @@ import "./HeroVideoCreator.scss";
 function HeroVideoCreator(props) {
   return (
     <div className="hero-video__creator-container">
-      <h3 className="hero-video__name">By {props.defaultVideo.channel}</h3>
+      <h3 className="hero-video__name">By {props.selectedVideo.channel}</h3>
 
       <p className="hero-video__date">
-        {timestampToLocaleDateString(props.defaultVideo.timestamp)}
+        {timestampToLocaleDateString(props.selectedVideo.timestamp)}
       </p>
     </div>
   );

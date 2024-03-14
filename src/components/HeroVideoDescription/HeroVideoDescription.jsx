@@ -4,11 +4,11 @@ function HeroVideoDescription(props) {
   return (
     <div className="hero-video__description-container">
       <p className="hero-video__description">
-        {props.defaultVideo.description}
+        {props.selectedVideo.description}
       </p>
 
       <h3 className="video-comments__counter">
-        {props.defaultVideo.comments.length} Comments
+        {props.selectedVideo.comments.length} Comments
       </h3>
     </div>
   );

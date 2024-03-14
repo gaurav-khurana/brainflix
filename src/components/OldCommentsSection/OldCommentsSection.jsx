@@ -2,7 +2,7 @@ import "./OldCommentsSection.scss";
 import OldCommentIndividual from "../OldCommentIndividual/OldCommentIndividual";
 
 function OldCommentsSection(props) {
-  const commentsArr = props.defaultVideo.comments;
+  const commentsArr = props.selectedVideo.comments;
 
   return (
     <div className="oldcomments">
