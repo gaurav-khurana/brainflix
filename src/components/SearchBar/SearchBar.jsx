@@ -3,6 +3,7 @@ import UserImage from "../../assets/images/Mohan-muruge.jpg";
 import SearchIcon from "../../assets/icons/search.svg";
 import UploadIcon from "../../assets/icons/upload.svg";
 import Button from "../Button/Button";
+import { Link } from "react-router-dom";
 
 function SearchBar() {
   return (
@@ -29,14 +30,16 @@ function SearchBar() {
         />
       </div>
 
-      <Button
-        containerClassName="navbar__button-container"
-        className="button--navbar"
-        btnImageClassName="button__image--navbar"
-        srcImage={UploadIcon}
-        altText="Upload video icon"
-        text="UPLOAD"
-      />
+      <Link to={"uploadpage"}>
+        <Button
+          containerClassName="navbar__button-container"
+          className="button--navbar"
+          btnImageClassName="button__image--navbar"
+          srcImage={UploadIcon}
+          altText="Upload video icon"
+          text="UPLOAD"
+        />
+      </Link>
 
       <img
         className="navbar__userimage navbar__userimage--tablet"

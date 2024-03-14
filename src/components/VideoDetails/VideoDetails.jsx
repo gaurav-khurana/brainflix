@@ -22,7 +22,7 @@ function VideoDetails() {
         const response = await axios.get(`${baseUrl}/videos?api_key=${apiKey}`);
         const allVideos = response.data;
         const defaultVideoId = allVideos[0].id;
-        // setSelectedVideo(defaultVideo);
+
         const defaultVideoResponse = await axios.get(
           `${baseUrl}/videos/${defaultVideoId}?api_key=${apiKey}`
         );

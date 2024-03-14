@@ -1,0 +1,10 @@
+@use "../../styles/partials/global";
+
+form {
+  font-size: 2rem;
+
+  //   @include flexbox(column, flex-start, center);
+}
+textarea {
+  resize: none;
+}
