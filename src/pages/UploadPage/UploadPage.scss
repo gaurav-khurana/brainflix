@@ -1,7 +1,81 @@
-p {
-  font-size: 10rem;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+// h1,
+// h3,
+// label {
+//   font-size: 5rem;
+// }
+// img {
+//   width: 250px;
+//   height: 150px;
+// }
+
+.upload {
+  width: 100vw;
+  padding: $mob-spacing-big $mob-spacing-small;
+  border-top: $divider-width solid $divider-color;
+  margin-top: $mob-spacing-small;
+  &__title {
+    // font-weight: 600;
+    margin-bottom: 0.8rem;
+  }
+
+  &-hero {
+    width: 90vw;
+
+    @include flexbox(column, center, flex-start);
+
+    &__title {
+      color: $color-primary-silver;
+      margin-bottom: 0.4rem;
+    }
+    &__image {
+      width: 90vw;
+      border-radius: $button-radius;
+      object-fit: cover;
+      background-color: $color-secondary-mercury;
+    }
+  }
 }
-img {
-  width: 250px;
-  height: 150px;
+
+// tablet mode
+
+@include tablet {
+  .upload {
+    padding: $desk-spacing-big;
+    margin-top: 0;
+
+    &__title {
+      padding-bottom: $desk-spacing-small;
+      border-bottom: $divider-width solid $divider-color;
+    }
+    &-hero {
+      padding-top: $desk-spacing-small;
+
+      &__image {
+        width: 45vw;
+      }
+    }
+  }
+}
+
+// desktop mode
+
+@include desktop {
+  .upload {
+    &--desktop {
+      @include flexbox(row, flex-start, flex-start);
+    }
+
+    &-hero {
+      &__image {
+        width: 30vw;
+        background-color: rgba(0, 0, 0, 0);
+        margin-right: $mob-spacing-small;
+        padding-bottom: $mob-spacing-small;
+        border-bottom: $divider-width solid $divider-color;
+      }
+    }
+  }
 }

@@ -1,10 +1,92 @@
-@use "../../styles/partials/global";
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
 
-form {
-  font-size: 2rem;
+// form {
+//   font-size: 2rem;
 
-  //   @include flexbox(column, flex-start, center);
+//   //   @include flexbox(column, flex-start, center);
+// }
+// textarea {
+//   resize: none;
+// }
+
+.form {
+  width: 90vw;
+  padding-top: $mob-spacing-small;
+
+  @include flexbox(column, center, flex-start);
+
+  &__title {
+    color: $color-primary-silver;
+    margin-bottom: 0.4rem;
+  }
+
+  &__input,
+  &__textarea {
+    width: 90vw;
+    padding: 1.2rem;
+    margin-bottom: $mob-spacing-small;
+    background-color: $color-secondary-alabaster;
+    border: $divider-width solid $divider-color;
+    border-radius: $button-radius;
+
+    @include tablet {
+      padding: 1.6rem;
+      padding: 1.2rem;
+    }
+
+    &::placeholder {
+      color: $color-secondary-dark-black;
+    }
+
+    &::selection {
+      color: $color-secondary-dark-blue;
+    }
+
+    &:active &:focus {
+      border: 2px solid $color-primary-blue;
+      // outline-color: $color-primary-blue;
+    }
+
+    &--error {
+      border: $divider-width solid #d22d2d;
+    }
+  }
+
+  &__textarea {
+    resize: none;
+  }
 }
-textarea {
-  resize: none;
+
+.button {
+  &-container {
+    width: 90vw;
+
+    @include flexbox(column, center, center);
+  }
+}
+
+// tablet mode
+
+@include tablet {
+  .button {
+    &-container {
+      border-top: $divider-width solid $divider-color;
+      padding-top: $desk-spacing-small;
+
+      @include flexbox(row, flex-end, center);
+    }
+  }
+}
+
+// desktop mode
+
+@include desktop {
+  .form {
+    height: 48vh;
+  }
+  .button {
+    &-container {
+    }
+  }
 }
