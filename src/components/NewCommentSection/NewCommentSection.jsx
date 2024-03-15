@@ -1,14 +1,25 @@
 import "./NewCommentSection.scss";
 import Button from "../Button/Button";
 import UserImage from "../../assets/images/Mohan-muruge.jpg";
-
 import CommentIcon from "../../assets/icons/add_comment.svg";
+import axios from "axios";
 
 function NewCommentSection() {
-  // event handler to Submit Form - sprint 2
-  function handleSubmit(event) {
-    event.preventDefault();
-  }
+  // base url & api key for axios call
+  const baseUrl = "https://unit-3-project-api-0a5620414506.herokuapp.com";
+  const apiKey = "5f0fa1cf-41c3-48d9-9f18-aa53a8502f21";
+
+  // NOTE event handler to Submit Form - sprint 2
+  // function handleSubmit(event) {
+  //   event.preventDefault();
+
+  //   const postComment = async () => {
+  //     const response = await axios.post(
+  //       `${baseUrl}/videos/${commentId}/comments`
+  //     );
+
+  //   };
+  // }
 
   return (
     <article className="newcomment">
@@ -23,25 +34,30 @@ function NewCommentSection() {
       </div>
 
       <div className="newcomment__comment-container">
-        <textarea
-          className="newcomment__input"
-          name="newcomment__input"
-          type="textarea"
-          rows={4}
-          cols={5}
-          resize="none"
-          placeholder="Add a new comment"
-        />
+        <form
+          className="newcomment__comment-container"
+          // onSubmit={handleSubmit}
+        >
+          <textarea
+            className="newcomment__input"
+            name="newcomment__input"
+            type="textarea"
+            rows={4}
+            cols={5}
+            resize="none"
+            placeholder="Add a new comment"
+          />
 
-        <Button
-          onClick={handleSubmit}
-          containerClassName="newcomment__button-container"
-          className="button--comment"
-          btnImageClassName="button__image--comment"
-          srcImage={CommentIcon}
-          altText="Add Comment Icon"
-          text="COMMENT"
-        />
+          <Button
+            containerClassName="newcomment__button-container"
+            buttonType="submit"
+            className="button--comment"
+            btnImageClassName="button__image--comment"
+            srcImage={CommentIcon}
+            altText="Add Comment Icon"
+            text="COMMENT"
+          />
+        </form>
       </div>
     </article>
   );

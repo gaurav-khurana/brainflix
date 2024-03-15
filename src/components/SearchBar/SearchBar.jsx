@@ -33,6 +33,7 @@ function SearchBar() {
       <Link to={"uploadpage"}>
         <Button
           containerClassName="navbar__button-container"
+          buttonType="button"
           className="button--navbar"
           btnImageClassName="button__image--navbar"
           srcImage={UploadIcon}
