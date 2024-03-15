@@ -14,47 +14,44 @@ function VideoDetails() {
   const baseUrl = "https://unit-3-project-api-0a5620414506.herokuapp.com";
   const apiKey = "5f0fa1cf-41c3-48d9-9f18-aa53a8502f21";
 
-  const [selectedVideo, setSelectedVideo] = useState(null); // change null to the default video
+  const [selectedVideo, setSelectedVideo] = useState(null);
 
   useEffect(() => {
-    async function getVideoDetails() {
-      if (selectedVideo === null) {
-        const response = await axios.get(`${baseUrl}/videos?api_key=${apiKey}`);
-        const allVideos = response.data;
-        const defaultVideoId = allVideos[0].id;
+    const defaultVideoId = "84e96018-4022-434e-80bf-000ce4cd12b8";
+    // const defaultVideoId2 = defaultVideoId;
 
-        const defaultVideoResponse = await axios.get(
-          `${baseUrl}/videos/${defaultVideoId}?api_key=${apiKey}`
-        );
-        const videoDetails = defaultVideoResponse.data;
-        setSelectedVideo(videoDetails);
-      }
+    async function getVideoDetails(id) {
+      const response = await axios.get(
+        `${baseUrl}/videos/${id}?api_key=${apiKey}`
+      );
 
-      if (videoId) {
-        const response = await axios.get(
-          `${baseUrl}/videos/${videoId}?api_key=${apiKey}`
-        );
+      const videoDetails = response.data;
 
-        const videoDetails = response.data;
-
-        setSelectedVideo(videoDetails);
-      }
+      setSelectedVideo(videoDetails);
     }
-    getVideoDetails();
+
+    if (videoId) {
+      getVideoDetails(videoId);
+    } else {
+      getVideoDetails(defaultVideoId);
+      // getVideoDetails(defaultVideoId2);
+    }
   }, [videoId]);
 
   return (
     selectedVideo && (
-      <div>
+      <>
+        {/* <div> */}
         <Hero
           selectedVideo={selectedVideo}
           setSelectedVideo={setSelectedVideo}
         />
-        {/* <div className="main--mobile main--desktop"> */}
 
+        {/* <div className="main--mobile main--desktop"> */}
         <VideoSection selectedVideo={selectedVideo} />
         {/* </div> */}
-      </div>
+        {/* </div> */}
+      </>
     )
   );
 }
