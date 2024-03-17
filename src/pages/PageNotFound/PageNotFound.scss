@@ -1,3 +1,14 @@
+// @use "../../styles/partials/global";
+@use "../../styles/partials/mixins" as *;
+
 p {
   font-size: 10rem;
+}
+.page404 {
+  @include flexbox(row, center, center);
+
+  &__image {
+    height: 75vh;
+    margin-top: 2rem;
+  }
 }

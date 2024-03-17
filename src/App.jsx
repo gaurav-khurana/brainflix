@@ -16,7 +16,7 @@ function App() {
 
           <Route path="home" element={<Navigate to="/" />} />
 
-          <Route path="uploadpage" element={<UploadPage />} />
+          <Route path="upload" element={<UploadPage />} />
 
           <Route path="videos/:videoId" element={<Main />} />
 

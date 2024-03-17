@@ -30,7 +30,7 @@ function SearchBar() {
         />
       </div>
 
-      <Link to={"uploadpage"}>
+      <Link to={"upload"}>
         <Button
           containerClassName="navbar__button-container"
           buttonType="button"
