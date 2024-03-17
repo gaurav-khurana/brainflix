@@ -42,12 +42,10 @@ function NewCommentSection() {
           videoId = "84e96018-4022-434e-80bf-000ce4cd12b8";
         }
 
-        const response = await axios.post(
+        await axios.post(
           `${baseUrl}/videos/${videoId}/comments?api_key=${apiKey}`,
           { name, comment }
         );
-
-        // getDataBack();
       } catch (error) {
         console.log("Error Posting Comment");
       }

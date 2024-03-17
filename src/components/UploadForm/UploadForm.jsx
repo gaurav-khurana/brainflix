@@ -65,6 +65,14 @@ function UploadForm() {
     }
   }
 
+  // function to clear input fields on cancel button
+  function handleClearForm(event) {
+    const form = event.target.form;
+    form.reset();
+    form.title.value = "";
+    form.description.value = "";
+  }
+
   return (
     <form className="form" onSubmit={handleFormSubmit}>
       <label className="form__title" htmlFor="title">
@@ -117,6 +125,7 @@ function UploadForm() {
           srcImage={PublishIcon}
           altText="cancel publishing video button"
           text="CANCEL"
+          handleFunction={handleClearForm}
         />
       </div>
     </form>
