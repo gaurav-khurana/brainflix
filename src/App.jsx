@@ -1,17 +1,28 @@
 import "./App.scss";
-import Videos from "./data/video-details.json";
 import Header from "./components/Header/Header";
 import Main from "./components/Main/Main";
-import { allVideosContext } from "./context/context";
+import UploadPage from "./pages/UploadPage/UploadPage";
+import PageNotFound from "./pages/PageNotFound/PageNotFound";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 
 function App() {
   return (
     <>
-      <Header />
+      <BrowserRouter>
+        <Header />
 
-      <allVideosContext.Provider value={Videos}>
-        <Main />
-      </allVideosContext.Provider>
+        <Routes>
+          <Route path="/" element={<Main />} />
+
+          <Route path="home" element={<Navigate to="/" />} />
+
+          <Route path="upload" element={<UploadPage />} />
+
+          <Route path="videos/:videoId" element={<Main />} />
+
+          <Route path="*" element={<PageNotFound />} />
+        </Routes>
+      </BrowserRouter>
     </>
   );
 }

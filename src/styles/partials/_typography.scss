@@ -26,13 +26,16 @@
 
 // mobile styles
 
-.hero-video__title {
+.hero-video__title,
+.upload__title {
   font-size: $mob-font-header;
   line-height: 32px;
   font-weight: 700;
 }
 
-.newcomment__title {
+.newcomment__title,
+.upload-hero__title,
+.form__title {
   font-size: $mob-font-section-header;
   line-height: 2rem;
   font-weight: 600;
@@ -54,7 +57,9 @@
 .hero-video__likes-counter,
 .oldcomments__date,
 .oldcomments__text,
-.nextvideos__channel {
+.nextvideos__channel,
+.form__input,
+.form__textarea {
   font-size: $mob-font-subheader-body;
   line-height: 1.8rem;
 }
@@ -65,7 +70,9 @@
 }
 
 .button--comment,
-.button--navbar {
+.button--navbar,
+.button--inverted,
+.button--publish {
   font-size: $mob-font-subheader-body;
   font-weight: 600;
 }
@@ -73,12 +80,15 @@
 // tablet mode
 
 @include tablet {
-  .hero-video__title {
+  .hero-video__title,
+  .upload__title {
     font-size: $desk-font-header;
     line-height: 4.4rem;
   }
 
-  .newcomment__title {
+  .newcomment__title,
+  .upload-hero__title,
+  .form__title {
     font-size: $desk-font-section-header;
     line-height: 2rem;
   }
@@ -88,7 +98,9 @@
   .oldcomments__name,
   .nextvideos__heading,
   .nextvideos__title,
-  .button {
+  .button,
+  .form__input,
+  .form__textarea {
     font-size: $desk-font-subheader-body;
     line-height: 2.2rem;
   }
@@ -110,7 +122,9 @@
   }
 
   .button--comment,
-  .button--navbar {
+  .button--navbar,
+  .button--inverted,
+  .button--publish {
     font-size: $desk-font-subheader-body;
     line-height: 2rem;
   }

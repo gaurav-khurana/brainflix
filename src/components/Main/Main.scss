@@ -8,5 +8,6 @@
 @include desktop {
   .main--desktop {
     @include flexbox(row, center, flex-start);
+    flex-wrap: wrap;
   }
 }

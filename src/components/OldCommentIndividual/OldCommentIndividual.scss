@@ -1,5 +1,5 @@
-@use "../../styles/partials/global" as *;
-@use "../../styles/partials/typography" as *;
+@use "../../styles/partials/global";
+// @use "../../styles/partials/typography" as *;
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/mixins" as *;
 
@@ -9,7 +9,7 @@
     border-bottom: $divider-width solid $divider-color;
     padding: $mob-spacing-small 0;
 
-    @include flexbox(row, flex-start, center);
+    @include flexbox(row, flex-start, flex-start);
   }
 
   &__image {
@@ -32,7 +32,9 @@
   }
 
   &__details {
+    width: 75vw;
     margin-bottom: 1.2rem;
+
     @include flexbox(row, space-between, center);
   }
 
@@ -41,7 +43,7 @@
   }
 
   &__text {
-    word-wrap: break-word;
+    word-break: break-all;
   }
 }
 
@@ -72,6 +74,7 @@
     }
 
     &__details {
+      width: 81vw;
       margin-bottom: 0.6rem;
     }
   }

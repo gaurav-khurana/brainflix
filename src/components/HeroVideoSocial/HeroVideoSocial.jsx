@@ -11,7 +11,7 @@ function HeroVideoSocial(props) {
           src={SeenIcon}
           alt="Video seen icon"
         />
-        <p className="hero-video__seen-counter">{props.defaultVideo.views}</p>
+        <p className="hero-video__seen-counter">{props.selectedVideo.views}</p>
       </figure>
 
       <figure className="hero-video__social">
@@ -20,7 +20,7 @@ function HeroVideoSocial(props) {
           src={LikeIcon}
           alt="Likes icon for the video"
         />
-        <p className="hero-video__likes-counter">{props.defaultVideo.likes}</p>
+        <p className="hero-video__likes-counter">{props.selectedVideo.likes}</p>
       </figure>
     </div>
   );

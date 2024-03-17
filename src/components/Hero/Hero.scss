@@ -4,9 +4,9 @@
 @use "../../styles/partials/mixins" as *;
 
 .hero {
+  width: 100vw;
   margin-top: $mob-spacing-small;
   background-color: $color-secondary-dark-black;
-  opacity: 50%;
 
   // tablet mode
 

@@ -1,5 +1,3 @@
-@use "../../styles/partials/global" as *;
-@use "../../styles/partials/typography" as *;
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/mixins" as *;
 
@@ -28,13 +26,23 @@
     &--navbar {
       margin-right: 9rem;
     }
+
     &--comment {
       margin-right: 6rem;
+    }
+
+    &--publish {
+      margin-right: 9rem;
+    }
+
+    &--inverted {
+      display: none;
     }
   }
 
   &--navbar,
-  &--comment {
+  &--comment,
+  &--publish {
     @include flexbox(row, flex-start, center);
   }
 
@@ -45,6 +53,18 @@
   &--comment {
     width: 75vw;
   }
+
+  &--publish {
+    margin-bottom: $mob-spacing-small;
+  }
+
+  &--inverted {
+    background-color: $color-primary-white;
+    color: $color-primary-blue;
+    &:hover {
+      color: $color-primary-white;
+    }
+  }
 }
 
 // mobile wide screen mode
@@ -53,11 +73,15 @@
   .button {
     &__image {
       &--navbar {
-        margin-right: 35vw;
+        margin-right: 32vw;
       }
 
       &--comment {
-        margin-right: 25vw;
+        margin-right: 21vw;
+      }
+
+      &--publish {
+        margin-right: 30.5vw;
       }
     }
   }
@@ -79,13 +103,23 @@
       margin-right: 0;
     }
 
+    &--publish {
+      margin-right: $mob-spacing-small;
+      margin-bottom: 0;
+    }
+
     &__image {
       &--navbar {
-        margin-right: 3rem;
+        margin-right: 2rem;
       }
 
       &--comment {
         margin-right: $desk-spacing-small;
+      }
+
+      &--publish {
+        margin-right: 2rem;
+        margin-right: 3.7vw;
       }
     }
   }
@@ -106,6 +140,11 @@
     &--comment {
       width: 15vw;
       margin-left: 8rem;
+    }
+    &__image {
+      &--publish {
+        margin-right: 5vw;
+      }
     }
   }
 
@@ -130,6 +169,10 @@
     &__image {
       &--comment {
         margin-right: 3rem;
+      }
+
+      &--publish {
+        margin-right: 7.5rem;
       }
     }
   }
