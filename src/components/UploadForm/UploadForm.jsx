@@ -18,14 +18,10 @@ function UploadForm() {
     setVideoDescription(event.target.value);
   };
 
-  console.log(videoTitle);
-  console.log(videoDescription);
-
   // to check if form data is valid
 
   function isTitleValid() {
     if (typeof videoTitle === "string" && videoTitle.length > 3) {
-      console.log("Data Valid");
       return true;
     } else {
       videoTitle.classList?.remove("form__input--error");
@@ -34,7 +30,6 @@ function UploadForm() {
   function isDescriptionValid() {
     if (typeof videoDescription === "string" && videoDescription.length > 5) {
       videoDescription.classList?.remove("form__input--error");
-      console.log("Data Valid");
       return true;
     } else {
       videoDescription.classList?.remove("form__input--error");

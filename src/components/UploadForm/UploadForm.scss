@@ -83,10 +83,25 @@
 
 @include desktop {
   .form {
-    height: 48vh;
+    max-height: 48vh;
+    width: 50vw;
+    margin-top: 1rem;
+
+    @include flexbox(column, flex-start, flex-start);
+
+    &__input,
+    &__textarea {
+      width: 50vw;
+    }
+
+    &__textarea {
+      margin-bottom: $desk-spacing-big;
+    }
   }
   .button {
     &-container {
+      width: 50vw;
+      // margin-top: 2.1rem;
     }
   }
 }

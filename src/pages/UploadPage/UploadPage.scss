@@ -64,16 +64,29 @@
 
 @include desktop {
   .upload {
+    width: 82vw;
+    margin-left: 11rem;
+
+    &__title {
+      margin-bottom: 0;
+    }
+
     &--desktop {
+      width: 81vw;
       @include flexbox(row, flex-start, flex-start);
     }
 
     &-hero {
+      width: 25vw;
+      margin-right: $mob-spacing-small;
+
       &__image {
-        width: 30vw;
+        width: 25vw;
+        height: 26vh;
+        height: 22rem;
         background-color: rgba(0, 0, 0, 0);
-        margin-right: $mob-spacing-small;
-        padding-bottom: $mob-spacing-small;
+        padding-bottom: $desk-spacing-big;
+        // border-radius: $button-radius;
         border-bottom: $divider-width solid $divider-color;
       }
     }

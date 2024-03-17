@@ -17,6 +17,16 @@
   }
 }
 
+// mobile wide screen
+
+@include mobile-wide {
+  .hero-video {
+    &__details-container {
+      @include flexbox(row, space-between, center);
+    }
+  }
+}
+
 // tablet mode
 
 @include tablet {
