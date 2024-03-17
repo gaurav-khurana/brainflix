@@ -1,23 +1,12 @@
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/mixins" as *;
 
-// h1,
-// h3,
-// label {
-//   font-size: 5rem;
-// }
-// img {
-//   width: 250px;
-//   height: 150px;
-// }
-
 .upload {
   width: 100vw;
   padding: $mob-spacing-big $mob-spacing-small;
   border-top: $divider-width solid $divider-color;
   margin-top: $mob-spacing-small;
   &__title {
-    // font-weight: 600;
     margin-bottom: 0.8rem;
   }
 
@@ -86,7 +75,6 @@
         height: 22rem;
         background-color: rgba(0, 0, 0, 0);
         padding-bottom: $desk-spacing-big;
-        // border-radius: $button-radius;
         border-bottom: $divider-width solid $divider-color;
       }
     }

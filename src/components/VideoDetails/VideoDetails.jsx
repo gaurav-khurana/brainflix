@@ -4,8 +4,6 @@ import VideoSection from "../VideoSection/VideoSection";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-// import {useParams} from "useParams"  doing it params way
-// const id = useParams()   doing it the params way
 
 function VideoDetails() {
   const { videoId } = useParams();
@@ -18,7 +16,6 @@ function VideoDetails() {
 
   useEffect(() => {
     const defaultVideoId = "84e96018-4022-434e-80bf-000ce4cd12b8";
-    // const defaultVideoId2 = defaultVideoId;
 
     async function getVideoDetails(id) {
       const response = await axios.get(
@@ -34,23 +31,18 @@ function VideoDetails() {
       getVideoDetails(videoId);
     } else {
       getVideoDetails(defaultVideoId);
-      // getVideoDetails(defaultVideoId2);
     }
   }, [videoId]);
 
   return (
     selectedVideo && (
       <>
-        {/* <div> */}
         <Hero
           selectedVideo={selectedVideo}
           setSelectedVideo={setSelectedVideo}
         />
 
-        {/* <div className="main--mobile main--desktop"> */}
         <VideoSection selectedVideo={selectedVideo} />
-        {/* </div> */}
-        {/* </div> */}
       </>
     )
   );

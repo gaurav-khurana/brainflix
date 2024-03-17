@@ -16,7 +16,7 @@ function NewCommentSection() {
 
   let { videoId } = useParams();
 
-  // NOTE event handler to Submit Form - sprint 2
+  // event handler to Submit Form after validation
   function handleSubmit(event) {
     event.preventDefault();
 

@@ -36,10 +36,6 @@ function VideoList() {
 
       <ul className="nextvideos__list">
         {allVideos
-          // .filter((video) => video.id !== props.defaultVideo.id) //TODO FILTER FUNCT DOESNT WORK ON 1ST RENDER; WORKS AFTER 1 SELECTION
-          // .filter(
-          //   (video) => video.id !== defaultVideoId || video.id !== videoId
-          // )
           .filter((video) => video.id !== videoId)
           .map((video) => (
             <VideoElement key={video.id} video={video} />

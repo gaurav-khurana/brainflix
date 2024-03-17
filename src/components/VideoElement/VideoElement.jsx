@@ -3,12 +3,9 @@ import "./VideoElement.scss";
 
 function VideoElement(props) {
   return (
-    // <Link to=`props.video.id` /> params way of doing it
     <>
       <Link to={`/videos/${props.video.id}`}>
         <li className="nextvideos__individual">
-          {/* <Navigate to={`/videos/${props.video.id}`} /> */}
-          {/* <Navigate to={`/`} /> */}
           <img
             className="nextvideos__image"
             src={props.video.image}

@@ -51,28 +51,12 @@ function UploadForm() {
     }
   }
 
+  // event handler to submit form after validation
+
   function handleFormSubmit(event) {
     event.preventDefault();
-    console.log(event.target);
     const form = event.target;
 
-    // form validation before upload
-    // const videoTitle = form.title;
-    // console.log(videoTitle.value);
-    // const videoDescription = form.description;
-    // console.log(videoDescription.value);
-
-    // isFormComplete();
-    // check
-    // if (
-    //   typeof videoTitle.value === "string" &&
-    //   typeof videoDescription.value === "string"
-    // ) {
-    //   // videoTitle.classList.remove("input__form--error");
-    //   // videoDescription.classList.remove("input__form--error");
-    //   alert("Video uploaded successfully !");
-    //   navigate("/");
-    // }
     if (isFormComplete()) {
       console.log("form valid & complete so UPLOADED");
       alert("Video uploaded successfully !");
@@ -88,7 +72,6 @@ function UploadForm() {
       </label>
 
       <input
-        // className={`form__input`}
         className={`form__input ${isTitleValid() ? "" : "form__input--error"} `}
         type="text"
         name="title"
@@ -103,7 +86,6 @@ function UploadForm() {
       </label>
 
       <textarea
-        // className="form__textarea"
         className={`form__textarea ${
           isDescriptionValid() ? "" : "form__input--error"
         } `}

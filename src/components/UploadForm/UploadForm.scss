@@ -1,15 +1,6 @@
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/mixins" as *;
 
-// form {
-//   font-size: 2rem;
-
-//   //   @include flexbox(column, flex-start, center);
-// }
-// textarea {
-//   resize: none;
-// }
-
 .form {
   width: 90vw;
   padding-top: $mob-spacing-small;
@@ -45,7 +36,6 @@
 
     &:active &:focus {
       border: 2px solid $color-primary-blue;
-      // outline-color: $color-primary-blue;
     }
 
     &--error {
@@ -101,7 +91,6 @@
   .button {
     &-container {
       width: 50vw;
-      // margin-top: 2.1rem;
     }
   }
 }
