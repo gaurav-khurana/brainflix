@@ -4,13 +4,12 @@ import UserImage from "../../assets/images/Mohan-muruge.jpg";
 import CommentIcon from "../../assets/icons/add_comment.svg";
 import axios from "axios";
 import { useParams } from "react-router-dom";
-
 import { useEffect, useState } from "react";
 
 function NewCommentSection() {
   // base url & api key for axios call
-  const baseUrl = "https://unit-3-project-api-0a5620414506.herokuapp.com";
-  const apiKey = "5f0fa1cf-41c3-48d9-9f18-aa53a8502f21";
+  // const baseUrl = "https://unit-3-project-api-0a5620414506.herokuapp.com";
+  // const apiKey = "5f0fa1cf-41c3-48d9-9f18-aa53a8502f21";
 
   const [updatedComments, setUpdatedComments] = useState([]);
 
@@ -43,7 +42,7 @@ function NewCommentSection() {
         }
 
         await axios.post(
-          `${baseUrl}/videos/${videoId}/comments?api_key=${apiKey}`,
+          `${process.env.REACT_APP_BASE_URL}/videos/${videoId}/comments?api_key=${process.env.REACT_APP_API_KEY}`,
           { name, comment }
         );
       } catch (error) {
@@ -60,7 +59,7 @@ function NewCommentSection() {
     const getDataBack = async () => {
       try {
         const response = await axios.get(
-          `${baseUrl}/videos/${videoId}?api_key=${apiKey}`
+          `${process.env.REACT_APP_BASE_URL}/videos/${videoId}?api_key=${process.env.REACT_APP_API_KEY}`
         );
         const foundData = response.data.comments;
 
