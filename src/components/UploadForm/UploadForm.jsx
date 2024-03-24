@@ -3,6 +3,7 @@ import "./UploadForm.scss";
 import PublishIcon from "../../assets/icons/publish.svg";
 import Button from "../../components/Button/Button";
 import { useState } from "react";
+import axios from "axios";
 
 function UploadForm() {
   const navigate = useNavigate();
@@ -27,6 +28,7 @@ function UploadForm() {
       videoTitle.classList?.remove("form__input--error");
     }
   }
+
   function isDescriptionValid() {
     if (typeof videoDescription === "string" && videoDescription.length > 5) {
       videoDescription.classList?.remove("form__input--error");
@@ -40,13 +42,11 @@ function UploadForm() {
 
   function isFormComplete() {
     if (!videoTitle || !videoDescription) {
-      console.log("form INCOMPLETE");
       alert("Video submission form incomplete");
       return false;
     } else {
       videoTitle.classList?.remove("form__input--error");
       videoDescription.classList?.remove("form__input--error");
-      console.log("form COMPLETE");
       return true;
     }
   }
@@ -57,20 +57,43 @@ function UploadForm() {
     event.preventDefault();
     const form = event.target;
 
+    const title = form.title.value;
+
+    const description = form.description.value;
+
     if (isFormComplete()) {
-      console.log("form valid & complete so UPLOADED");
       alert("Video uploaded successfully !");
       form.reset();
       navigate("/");
+
+      const newVideo = {
+        title: title,
+        description: description,
+      };
+
+      const uploadVideo = async () => {
+        try {
+          const response = await axios.post(
+            `${process.env.REACT_APP_BASE_URL}/videos`,
+            newVideo
+          );
+        } catch (error) {
+          console.log(error, "Error while Uploading");
+        }
+      };
+
+      uploadVideo(newVideo);
     }
   }
 
   // function to clear input fields on cancel button
   function handleClearForm(event) {
     const form = event.target.form;
-    form.reset();
+
     form.title.value = "";
     form.description.value = "";
+
+    navigate("/");
   }
 
   return (
@@ -83,13 +106,14 @@ function UploadForm() {
         className={`form__input ${isTitleValid() ? "" : "form__input--error"} `}
         type="text"
         name="title"
+        id="title"
         value={videoTitle}
         onChange={handleVideoTitle}
         autoFocus
         placeholder="Add a title to your video"
       />
 
-      <label className="form__title" htmlFor="description">
+      <label className="form__title " htmlFor="description">
         ADD A VIDEO DESCRIPTION
       </label>
 
