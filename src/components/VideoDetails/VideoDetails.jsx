@@ -8,10 +8,6 @@ import { useParams } from "react-router-dom";
 function VideoDetails() {
   const { videoId } = useParams();
 
-  // base url & api key for axios call
-  // const baseUrl = "https://unit-3-project-api-0a5620414506.herokuapp.com";
-  // const apiKey = "5f0fa1cf-41c3-48d9-9f18-aa53a8502f21";
-
   const [selectedVideo, setSelectedVideo] = useState(null);
 
   useEffect(() => {

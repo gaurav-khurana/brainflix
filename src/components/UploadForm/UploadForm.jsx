@@ -42,13 +42,11 @@ function UploadForm() {
 
   function isFormComplete() {
     if (!videoTitle || !videoDescription) {
-      console.log("form INCOMPLETE");
       alert("Video submission form incomplete");
       return false;
     } else {
       videoTitle.classList?.remove("form__input--error");
       videoDescription.classList?.remove("form__input--error");
-      console.log("form COMPLETE");
       return true;
     }
   }
@@ -58,27 +56,20 @@ function UploadForm() {
   function handleFormSubmit(event) {
     event.preventDefault();
     const form = event.target;
-    console.log(event);
-    console.log(form);
 
     const title = form.title.value;
-    console.log(title);
 
     const description = form.description.value;
-    console.log(description);
 
     if (isFormComplete()) {
-      console.log("form valid & complete so UPLOADED");
       alert("Video uploaded successfully !");
       form.reset();
+      navigate("/");
 
       const newVideo = {
         title: title,
         description: description,
       };
-      console.log(newVideo);
-
-      console.log(process.env.REACT_APP_BASE_URL);
 
       const uploadVideo = async () => {
         try {
@@ -86,8 +77,6 @@ function UploadForm() {
             `${process.env.REACT_APP_BASE_URL}/videos`,
             newVideo
           );
-          // `http://localhost:8080/videos`,
-          console.log(response.data);
         } catch (error) {
           console.log(error, "Error while Uploading");
         }
@@ -95,20 +84,20 @@ function UploadForm() {
 
       uploadVideo(newVideo);
     }
-
-    navigate("/");
   }
 
   // function to clear input fields on cancel button
   function handleClearForm(event) {
     const form = event.target.form;
-    form.reset();
+
     form.title.value = "";
     form.description.value = "";
+
+    navigate("/");
   }
 
   return (
-    <form className="form1" onSubmit={handleFormSubmit}>
+    <form className="form" onSubmit={handleFormSubmit}>
       <label className="form__title" htmlFor="title">
         TITLE FOR VIDEO
       </label>
@@ -124,7 +113,7 @@ function UploadForm() {
         placeholder="Add a title to your video"
       />
 
-      <label className="form__title" htmlFor="description">
+      <label className="form__title " htmlFor="description">
         ADD A VIDEO DESCRIPTION
       </label>
 
